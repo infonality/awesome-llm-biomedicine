@@ -1,6 +1,4 @@
-# Awesome LLM for Biomedicine
-
-[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) — A curated list of large language models, datasets, tools, and benchmarks for biomedical and clinical applications — covering clinical text understanding, drug discovery, genomics, protein science, and healthcare AI.
+# Awesome LLM for Biomedicine [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
 PRs welcome — [suggest a resource](https://github.com/infonality/awesome-llm-biomedicine/issues/new).
 
@@ -77,7 +75,6 @@ Models for molecular property prediction, drug-drug interaction, and chemical ge
 - [MedQA (USMLE)](https://github.com/jind11/MedQA) - QA. 12.7K questions. US medical licensing exam questions.
 - [MIMIC-III / MIMIC-IV](https://physionet.org/content/mimiciv/) - Clinical notes, tables. 2M+ notes. Most-used clinical text corpus; requires training + CITI.
 - [MMLU (medical subsets)](https://github.com/hendrycks/test) - MCQ. 1K+ per subject. Clinical knowledge evaluation; widely used in LLM benchmarks.
-- [n2c2 / i2b2 datasets](https://portal.dbmi.hms.harvard.edu/projects/n2c2-2024/) - NER, RE, coreference. ~1,000 notes each year. Historical shared tasks; clinical notes.
 - [PubMedQA](https://github.com/pubmedqa/pubmedqa) - QA. 1K expert + 211K unlabeled. QA over PubMed abstracts.
 
 ### Relation Extraction & Drug Interactions
