@@ -1,8 +1,26 @@
 # Awesome LLM for Biomedicine
 
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+
 A curated list of large language models, datasets, tools, and benchmarks for biomedical and clinical applications — covering clinical text understanding, drug discovery, genomics, protein science, and healthcare AI.
 
-Maintained by [@infonality](https://github.com/infonality) · PRs welcome · [Suggest a resource](https://github.com/infonality/awesome-llm-biomedicine/issues/new)
+PRs welcome — [suggest a resource](https://github.com/infonality/awesome-llm-biomedicine/issues/new).
+
+---
+
+## Contents
+
+- [Clinical LLMs](#clinical-llms)
+- [Genomics LLMs](#genomics-llms)
+- [Drug Discovery & Molecular LLMs](#drug-discovery--molecular-llms)
+- [Protein & Structural Biology LLMs](#protein--structural-biology-llms)
+- [Benchmarks & Datasets](#benchmarks--datasets)
+- [Shared Tasks & Challenges](#shared-tasks--challenges)
+- [Tools & Libraries](#tools--libraries)
+- [Key Papers](#key-papers)
+- [Ontologies & Knowledge Bases](#ontologies--knowledge-bases)
+- [Courses & Tutorials](#courses--tutorials)
+- [Glossary](#glossary)
 
 ---
 
@@ -10,194 +28,162 @@ Maintained by [@infonality](https://github.com/infonality) · PRs welcome · [Su
 
 Pre-trained models fine-tuned on clinical notes, EHR data, and medical literature.
 
-| Model | Params | Pre-training data | Link | Notes |
-|---|---|---|---|---|
-| ClinicalBERT | 110M | MIMIC-III discharge summaries | [HF](https://huggingface.co/emilyalsentzer/Bio_ClinicalBERT) | BERT fine-tuned on clinical notes |
-| PubMedBERT | 110M | PubMed abstracts (from scratch) | [HF](https://huggingface.co/microsoft/PubMedBERT) | Pre-trained from scratch on PubMed — strong baseline for biomedical NLP |
-| BioBERT | 110M | PubMed + PMC | [HF](https://huggingface.co/dmis-lab/biobert-base-cased-v1.2) | Early biomedical BERT; widely cited |
-| ClinicalLongformer | 4K ctx | Clinical notes | [HF](https://huggingface.co/yikao810/ClinicalLongformer) | Long-context clinical model for full notes |
-| BioGPT | 1.5B | PubMed + papers | [GitHub](https://github.com/microsoft/BioGPT) | Microsoft's generative model for biomedical text generation and mining |
-| GatorTron | 3.9B/8.9B | 90B tokens (clinical + PubMed) | [Paper](https://arxiv.org/abs/2203.03560) | Large clinical model from UF Health |
-| Med-PaLM 2 | — | Google's medical LLM | [Paper](https://arxiv.org/abs/2305.09617) | Achieves USMLE-level performance; not open-weight |
-| PMC-LLaMA | 7B/13B | PubMed Central | [HF](https://huggingface.co/axiong/PMC_LLaMA_13B) | LLaMA fine-tuned on biomedical literature |
-| BioMistral | 7B | PubMed Central | [HF](https://huggingface.co/BioMistral/BioMistral-7B) | Mistral-based open biomedical LLM |
-| MEDITRON-7B/70B | 7B/70B | Medical papers + guidelines | [HF](https://huggingface.co/epfl-llm/meditron-7b) | EPFL; open-weight, clinical reasoning |
-| Clinical-Camel | 7B/13B/70B | Clinical text | [GitHub](https://github.com/epfLLM/meditron) | Clinical domain adaptation of LLaMA-2 |
-| BioMedLM (PubMedGPT) | 2.7B | PubMed | [HF](https://huggingface.co/stanford-crfm/BioMedLM) | Stanford CRFM; domain-specific from scratch |
+- [BioBERT](https://github.com/dmis-lab/biobert) - 110M params. PubMed + PMC. Early biomedical BERT; widely cited.
+- [BioMedLM (PubMedGPT)](https://huggingface.co/stanford-crfm/BioMedLM) - 2.7B params. Stanford CRFM; domain-specific from scratch.
+- [BioGPT](https://github.com/microsoft/BioGPT) - 1.5B params. PubMed + papers. Microsoft's generative model for biomedical text generation and mining.
+- [BioMistral](https://huggingface.co/BioMistral/BioMistral-7B) - 7B params. PubMed Central. Mistral-based open biomedical LLM.
+- [ClinicalBERT](https://huggingface.co/emilyalsentzer/Bio_ClinicalBERT) - 110M params. MIMIC-III discharge summaries. BERT fine-tuned on clinical notes.
+- [Clinical-Camel](https://github.com/epfLLM/meditron) - 7B/13B/70B params. Clinical domain adaptation of LLaMA-2.
+- [ClinicalLongformer](https://huggingface.co/yikao810/ClinicalLongformer) - 4K context. Clinical notes. Long-context clinical model for full notes.
+- [GatorTron](https://arxiv.org/abs/2203.03560) - 3.9B/8.9B params. 90B tokens (clinical + PubMed). Large clinical model from UF Health.
+- [Med-PaLM 2](https://arxiv.org/abs/2305.09617) - Google's medical LLM. Achieves USMLE-level performance; not open-weight.
+- [MEDITRON](https://huggingface.co/epfl-llm/meditron-7b) - 7B/70B params. Medical papers + guidelines. EPFL; open-weight, clinical reasoning.
+- [PMC-LLaMA](https://huggingface.co/axiong/PMC_LLaMA_13B) - 7B/13B params. PubMed Central. LLaMA fine-tuned on biomedical literature.
+- [PubMedBERT](https://huggingface.co/microsoft/PubMedBERT) - 110M params. PubMed abstracts (from scratch). Strong baseline for biomedical NLP.
 
 ## Genomics LLMs
 
 Foundation models for single-cell RNA-seq, DNA sequences, and genomics.
 
-| Model | Params | Domain | Link | Notes |
-|---|---|---|---|---|
-| Geneformer | 95M | scRNA-seq | [GitHub](https://github.com/jxmorisette/geneformer) | Foundation model for transcriptomics; pre-trained on 30M cells |
-| scGPT | ~50M | scRNA-seq | [GitHub](https://github.com/bowang-lab/scGPT) | Single-cell foundation model; cell type annotation, perturbation prediction |
-| Nucleotide Transformer | 500M–2.5B | DNA sequences | [HF](https://huggingface.co/InstaDeepAI/nucleotide-transformer-2.5b-multi-species) | Multi-species DNA foundation model |
-| DNABERT-2 | 117M | DNA sequences | [GitHub](https://github.com/MAGICS-LAB/DNABERT_2) | Improved genome understanding model |
-| HyenaDNA | 1k–1M ctx | DNA sequences | [GitHub](https://github.com/HazyResearch/hyena-dna) | Ultra-long-context genomic model |
-| Caduceus | — | DNA | [GitHub](https://github.com/klab-lab/caduceus) | Reversible and bi-directional DNA sequence modeling |
+- [Caduceus](https://github.com/klab-lab/caduceus) - DNA sequences. Reversible and bi-directional DNA sequence modeling.
+- [DNABERT-2](https://github.com/MAGICS-LAB/DNABERT_2) - 117M params. DNA sequences. Improved genome understanding model.
+- [Geneformer](https://github.com/jxmorisette/geneformer) - 95M params. scRNA-seq. Foundation model for transcriptomics; pre-trained on 30M cells.
+- [HyenaDNA](https://github.com/HazyResearch/hyena-dna) - 1K-1M context. DNA sequences. Ultra-long-context genomic model.
+- [Nucleotide Transformer](https://huggingface.co/InstaDeepAI/nucleotide-transformer-2.5b-multi-species) - 500M-2.5B params. DNA sequences. Multi-species DNA foundation model.
+- [scGPT](https://github.com/bowang-lab/scGPT) - ~50M params. scRNA-seq. Single-cell foundation model; cell type annotation, perturbation prediction.
 
 ## Drug Discovery & Molecular LLMs
 
 Models for molecular property prediction, drug-drug interaction, and chemical generation.
 
-| Model | Domain | Link | Notes |
-|---|---|---|---|
-| ChemBERTa | SMILES molecules | [HF](https://huggingface.co/seyonec/ChemBERTa-zinc-base-v1) | RoBERTa for molecular property prediction |
-| MolT5 | Molecule ↔ text | [GitHub](https://github.com/blender-lab/MolT5) | T5 for molecule captioning and generation |
-| Chemformer | SMILES → reactions | [GitHub](https://github.com/MolecularAI/Chemformer) | Transformer for retrosynthesis |
-| Uni-Mol | 3D molecular | [GitHub](https://github.com/dptech-corp/Uni-Mol) | 3D molecular representation model |
-| Galactica | Scientific text + molecules | [HF](https://huggingface.co/facebook/galactica-120b) | Meta's science LLM (deprecated but influential) |
-| SmolLM-Chem | Small molecular | [HF](https://huggingface.co/ltg/ordeen-wissenschaftler-1b) | Lightweight chemical language model |
+- [ChemBERTa](https://huggingface.co/seyonec/ChemBERTa-zinc-base-v1) - SMILES molecules. RoBERTa for molecular property prediction.
+- [Chemformer](https://github.com/MolecularAI/Chemformer) - SMILES to reactions. Transformer for retrosynthesis.
+- [Galactica](https://huggingface.co/facebook/galactica-120b) - Scientific text + molecules. Meta's science LLM (deprecated but influential).
+- [MolT5](https://github.com/blender-lab/MolT5) - Molecule to text. T5 for molecule captioning and generation.
+- [Uni-Mol](https://github.com/dptech-corp/Uni-Mol) - 3D molecular. 3D molecular representation model.
 
 ## Protein & Structural Biology LLMs
 
-| Model | Params | Domain | Link | Notes |
-|---|---|---|---|---|
-| ESM-2 | 650M–15B | Protein sequences | [GitHub](https://github.com/facebookresearch/esm) | Meta's protein language model; structure prediction |
-| ProtTrans | 420M–3B | Protein sequences | [HF](https://huggingface.co/Rostlab/prot_bert_bfd) | Transformer for protein sequences |
-| ProGen2 | 6.4B–151B | Protein sequences | [GitHub](https://github.com/salesforce/progen2) | Generative protein design model |
-| SaProt | 650M | Protein (folded) | [HF](https://huggingface.co/westlake-repl/SaProt-650M) | Structure-aware protein model |
-| RoseTTAFold | — | Protein structure | [GitHub](https://github.com/RosettaCommons/RoseTTAFold) | 3D protein structure prediction (non-LLM but essential) |
+- [ESM-2](https://github.com/facebookresearch/esm) - 650M-15B params. Protein sequences. Meta's protein language model; structure prediction.
+- [ProGen2](https://github.com/salesforce/progen2) - 6.4B-151B params. Protein sequences. Generative protein design model.
+- [ProtTrans](https://huggingface.co/Rostlab/prot_bert_bfd) - 420M-3B params. Protein sequences. Transformer for protein sequences.
+- [RoseTTAFold](https://github.com/RosettaCommons/RoseTTAFold) - Protein structure. 3D protein structure prediction (non-LLM but essential).
+- [SaProt](https://huggingface.co/westlake-repl/SaProt-650M) - 650M params. Protein (folded). Structure-aware protein model.
 
 ## Benchmarks & Datasets
 
 ### Clinical Text
 
-| Dataset | Task | Size | Link | Notes |
-|---|---|---|---|---|
-| i2b2/n2c2 | NER, RE, coreference | ~1,000 notes each year | [DBMI](https://portal.dbmi.hms.harvard.edu/projects/n2c2-2024/) | Historical shared tasks; clinical notes |
-| MIMIC-III / MIMIC-IV | Clinical notes, tables | 2M+ notes | [PhysioNet](https://physionet.org/content/mimiciv/) | Most-used clinical text corpus; requires training + CITI |
-| BioASQ | QA, retrieval | ~5K questions | [bioasq.org](http://bioasq.org/) | Biomedical question answering benchmark |
-| PubMedQA | QA | 1K expert + 211K unlabeled | [GitHub](https://github.com/pubmedqa/pubmedqa) | QA over PubMed abstracts |
-| MedQA (USMLE) | QA | 12.7K questions | [GitHub](https://github.com/jind11/MedQA) | US medical licensing exam questions |
-| MMLU (medical subsets) | MCQ | 1K+ per subject | [GitHub](https://github.com/hendrycks/test) | Clinical knowledge evaluation; widely used in LLM benchmarks |
-| BlueBERT | Multiple | — | [GitHub](https://github.com/ncbi-nlp/BlueBERT) | NCBI's benchmark suite for biomedical language understanding |
+- [BioASQ](http://bioasq.org/) - QA, retrieval. ~5K questions. Biomedical question answering benchmark.
+- [BlueBERT benchmark suite](https://github.com/ncbi-nlp/BlueBERT) - Multiple tasks. NCBI's benchmark suite for biomedical language understanding.
+- [MedQA (USMLE)](https://github.com/jind11/MedQA) - QA. 12.7K questions. US medical licensing exam questions.
+- [MIMIC-III / MIMIC-IV](https://physionet.org/content/mimiciv/) - Clinical notes, tables. 2M+ notes. Most-used clinical text corpus; requires training + CITI.
+- [MMLU (medical subsets)](https://github.com/hendrycks/test) - MCQ. 1K+ per subject. Clinical knowledge evaluation; widely used in LLM benchmarks.
+- [n2c2 / i2b2](https://portal.dbmi.hms.harvard.edu/projects/n2c2-2024/) - NER, RE, coreference. ~1,000 notes each year. Historical shared tasks; clinical notes.
+- [PubMedQA](https://github.com/pubmedqa/pubmedqa) - QA. 1K expert + 211K unlabeled. QA over PubMed abstracts.
 
 ### Relation Extraction & Drug Interactions
 
-| Dataset | Task | Size | Link |
-|---|---|---|---|
-| ChemProt | Chemical–protein RE | 1,820 abstracts | [GitHub](https://github.com/arwhirang/recursive_chemprot) |
-| DDI (DrugBank) | Drug–drug interaction | 792 documents | [GitHub](https://github.com/ncbi-nlp/DDIExtraction2013) |
-| EU-ADR | Drug–adverse effect | 3,000 sentences | [GitHub](https://github.com/madmanc/EU-ADR-corpus) |
-| GAD | Gene–disease association | 5,330 sentences | [GitHub](https://github.com/dmis-lab/biobert) |
-| ADE Corpus | Adverse drug events | 3,000+ sentences | [GitHub](https://github.com/dmis-lab/ade-corpus) |
+- [ADE Corpus](https://github.com/dmis-lab/ade-corpus) - Adverse drug events. 3,000+ sentences.
+- [ChemProt](https://github.com/arwhirang/recursive_chemprot) - Chemical-protein RE. 1,820 abstracts.
+- [DDI (DrugBank)](https://github.com/ncbi-nlp/DDIExtraction2013) - Drug-drug interaction. 792 documents.
+- [EU-ADR](https://github.com/madmanc/EU-ADR-corpus) - Drug-adverse effect. 3,000 sentences.
+- [GAD](https://github.com/dmis-lab/biobert) - Gene-disease association. 5,330 sentences.
 
 ### Genomics
 
-| Dataset | Task | Size | Link |
-|---|---|---|---|
-| CellxGene | scRNA-seq census | 50M+ cells | [cellxgene.cziscience.com](https://cellxgene.cziscience.com/) | Chan Zuckerberg Initiative; largest single-cell atlas |
-| GEO | Gene expression | 20M+ samples | [ncbi.nlm.nih.gov/geo](https://www.ncbi.nlm.nih.gov/geo/) | Gene Expression Omnibus |
-| Tabula Sapiens | scRNA-seq | 500K+ cells | [tabula-sapiens.ds.czbiohub.org](https://tabula-sapiens.ds.czbiohub.org/) | Multi-organ human cell atlas |
+- [CellxGene](https://cellxgene.cziscience.com/) - scRNA-seq census. 50M+ cells. Chan Zuckerberg Initiative; largest single-cell atlas.
+- [GEO](https://www.ncbi.nlm.nih.gov/geo/) - Gene expression. 20M+ samples. Gene Expression Omnibus.
+- [Tabula Sapiens](https://tabula-sapiens.ds.czbiohub.org/) - scRNA-seq. 500K+ cells. Multi-organ human cell atlas.
 
 ## Shared Tasks & Challenges
 
-| Event | Focus | Year(s) | Link |
-|---|---|---|---|
-| BioNLP Shared Task | Event extraction from biomedical text | 2009–2023 | [GitHub](https://github.com/openbiomedicalnlp/bionlp-st) |
-| n2c2 / i2b2 | Clinical NLP challenges | 2007–present | [DBMI Harvard](https://portal.dbmi.hms.harvard.edu/projects/n2c2-2024/) |
-| TAC ADR Extraction | ADR extraction from drug labels | 2017 | [NIST](https://tac.nist.gov/2017/ADRF/) |
-| BioASQ Challenge | Biomedical QA & retrieval | 2013–present | [bioasq.org](http://bioasq.org/) |
-| MEDIQA | Medical text generation & summarization | 2019–2024 | [GitHub](https://github.com/abachaa/MEDIQA) |
-| MedNLI | Natural language inference in clinical text | 2018 | [GitHub](https://github.com/jgc128/mednli) |
+- [BioASQ Challenge](http://bioasq.org/) - Biomedical QA and retrieval. 2013-present.
+- [BioNLP Shared Task](https://github.com/openbiomedicalnlp/bionlp-st) - Event extraction from biomedical text. 2009-2023.
+- [MEDIQA](https://github.com/abachaa/MEDIQA) - Medical text generation and summarization. 2019-2024.
+- [MedNLI](https://github.com/jgc128/mednli) - Natural language inference in clinical text. 2018.
+- [n2c2 / i2b2](https://portal.dbmi.hms.harvard.edu/projects/n2c2-2024/) - Clinical NLP challenges. 2007-present.
+- [TAC ADR Extraction](https://tac.nist.gov/2017/ADRF/) - ADR extraction from drug labels. 2017.
 
 ## Tools & Libraries
 
-| Tool | Purpose | Link | Notes |
-|---|---|---|---|
-| scispaCy | Biomedical NLP pipeline | [GitHub](https://github.com/allenai/scispacy) | spaCy models for biomedical NER, linking |
-| MedSpaCy | Clinical NLP pipeline | [GitHub](https://github.com/medspacy/medspacy) | Clinical text processing, section detection |
-| BERN2 | Biomedical NER | [GitHub](https://github.com/dl4ds/bernal) | Multi-type entity recognition (disease, drug, gene, etc.) |
-| BioC | Biomedical text format | [GitHub](https://github.com/biocreative/bioc) | XML/JSON interchange format for biomedical text |
-| cTAKES | Clinical NLP | [Apache](https://ctakes.apache.org/) | Clinical Text Analysis Knowledge Extraction System |
-| BioGPT inference | Text generation | [GitHub](https://github.com/microsoft/BioGPT) | Microsoft's biomedical generative model |
-| BigBIO | Dataset loading | [GitHub](https://github.com/bigscience-workshop/biomedical) | Unified access to 160+ biomedical datasets |
+- [BERN2](https://github.com/dl4ds/bernal) - Biomedical NER. Multi-type entity recognition (disease, drug, gene, etc.).
+- [BigBIO](https://github.com/bigscience-workshop/biomedical) - Dataset loading. Unified access to 160+ biomedical datasets.
+- [BioC](https://github.com/biocreative/bioc) - Biomedical text format. XML/JSON interchange format for biomedical text.
+- [BioGPT inference](https://github.com/microsoft/BioGPT) - Text generation. Microsoft's biomedical generative model.
+- [cTAKES](https://ctakes.apache.org/) - Clinical NLP. Clinical Text Analysis Knowledge Extraction System.
+- [MedSpaCy](https://github.com/medspacy/medspacy) - Clinical NLP pipeline. Clinical text processing, section detection.
+- [scispaCy](https://github.com/allenai/scispacy) - Biomedical NLP pipeline. spaCy models for biomedical NER, linking.
 
 ## Key Papers
 
 ### Clinical LLMs
-- **BioBERT**: Lee et al. (2020). *BioBERT: a pre-trained biomedical language representation model for biomedical text mining.* [arXiv:1901.08746](https://arxiv.org/abs/1901.08746)
-- **PubMedBERT**: Gu et al. (2021). *Domain-Specific Language Model Pretraining for Biomedical Natural Language Processing.* [arXiv:2007.15779](https://arxiv.org/abs/2007.15779)
-- **BioGPT**: Luo et al. (2022). *BioGPT: generative pre-trained transformer for biomedical text generation and mining.* [arXiv:2210.17100](https://arxiv.org/abs/2210.17100)
-- **Med-PaLM**: Singhal et al. (2023). *Large language models encode clinical knowledge.* [arXiv:2212.13138](https://arxiv.org/abs/2212.13138)
-- **MEDITRON**: Chen et al. (2023). *MEDITRON-70B: Scaling Medical Pretraining of Language Models.* [arXiv:2311.18279](https://arxiv.org/abs/2311.18279)
+
+- BioBERT: Lee et al. (2020). BioBERT: a pre-trained biomedical language representation model for biomedical text mining. [arXiv:1901.08746](https://arxiv.org/abs/1901.08746)
+- BioGPT: Luo et al. (2022). BioGPT: generative pre-trained transformer for biomedical text generation and mining. [arXiv:2210.17100](https://arxiv.org/abs/2210.17100)
+- ClinicalBERT: Alsentzer et al. (2019). Publicly Available Clinical BERT Embeddings. [arXiv:1904.03323](https://arxiv.org/abs/1904.03323)
+- Med-PaLM: Singhal et al. (2023). Large language models encode clinical knowledge. [arXiv:2212.13138](https://arxiv.org/abs/2212.13138)
+- MEDITRON: Chen et al. (2023). MEDITRON-70B: Scaling Medical Pretraining of Language Models. [arXiv:2311.18279](https://arxiv.org/abs/2311.18279)
+- PubMedBERT: Gu et al. (2021). Domain-Specific Language Model Pretraining for Biomedical Natural Language Processing. [arXiv:2007.15779](https://arxiv.org/abs/2007.15779)
 
 ### Genomics LLMs
-- **Geneformer**: Theodoris et al. (2023). *Transfer learning enables predictions in network biology.* [Nature](https://www.nature.com/articles/s41586-023-06139-9)
-- **scGPT**: Cui et al. (2024). *scGPT: Toward Building a Foundation Model for Single-Cell Multi-omics Using Single-Cell Transcriptomics.* [Nature Methods](https://www.nature.com/articles/s41592-024-02205-7)
-- **Nucleotide Transformer**: Dalla-Torre et al. (2024). *The Nucleotide Transformer: Building and Evaluating Robust Foundation Models for Human Genomics.* [Nature Methods](https://www.nature.com/articles/s41592-024-02330-3)
+
+- Geneformer: Theodoris et al. (2023). Transfer learning enables predictions in network biology. [Nature](https://www.nature.com/articles/s41586-023-06139-9)
+- Nucleotide Transformer: Dalla-Torre et al. (2024). The Nucleotide Transformer: Building and Evaluating Robust Foundation Models for Human Genomics. [Nature Methods](https://www.nature.com/articles/s41592-024-02330-3)
+- scGPT: Cui et al. (2024). scGPT: Toward Building a Foundation Model for Single-Cell Multi-omics Using Single-Cell Transcriptomics. [Nature Methods](https://www.nature.com/articles/s41592-024-02205-7)
 
 ### Drug Discovery
-- **ChemBERTa**: Chithrananda et al. (2020). *ChemBERTa: Large-Scale Self-Supervised Pretraining for Molecular Property Prediction.* [arXiv:2010.09885](https://arxiv.org/abs/2010.09885)
-- **MolT5**: Edwards et al. (2022). *Translation between Molecules and Natural Language.* [arXiv:2204.11817](https://arxiv.org/abs/2204.11817)
 
-### Clinical NLP Foundations
-- **ClinicalBERT**: Alsentzer et al. (2019). *Publicly Available Clinical BERT Embeddings.* [arXiv:1904.03323](https://arxiv.org/abs/1904.03323)
-- **i2b2 overview**: Uzuner et al. (2011). *Extracting medication information from discharge summaries.* JAMIA.
+- ChemBERTa: Chithrananda et al. (2020). ChemBERTa: Large-Scale Self-Supervised Pretraining for Molecular Property Prediction. [arXiv:2010.09885](https://arxiv.org/abs/2010.09885)
+- MolT5: Edwards et al. (2022). Translation between Molecules and Natural Language. [arXiv:2204.11817](https://arxiv.org/abs/2204.11817)
 
 ### Evaluation & Safety
-- **Med-HALT**: Pal et al. (2024). *Med-HALT: Medical Domain Hallucination Test for Large Language Models.* [arXiv:2307.15389](https://arxiv.org/abs/2307.15389)
-- **Clinical safety evaluation**: Omiye et al. (2023). *Large language models propagate race-based medicine.* [Nature](https://www.nature.com/articles/d41586-023-02261-3)
+
+- Clinical safety evaluation: Omiye et al. (2023). Large language models propagate race-based medicine. [Nature](https://www.nature.com/articles/d41586-023-02261-3)
+- Med-HALT: Pal et al. (2024). Med-HALT: Medical Domain Hallucination Test for Large Language Models. [arXiv:2307.15389](https://arxiv.org/abs/2307.15389)
 
 ## Ontologies & Knowledge Bases
 
 Essential for any biomedical NLP/LLM practitioner entering the field.
 
-| Resource | Coverage | Link | When to use |
-|---|---|---|---|
-| **UMLS** | Unified Medical Language System | [NLM](https://www.nlm.nih.gov/research/umls/) | General biomedical concept mapping; requires license (free for research) |
-| **MedDRA** | Adverse drug reactions | [meddra.org](https://www.meddra.org/) | Pharmacovigilance, ADR coding; updates twice yearly |
-| **SNOMED CT** | Clinical terminology | [snomed.org](https://www.snomed.org/) | Clinical notes, EHR coding |
-| **RxNorm** | Drug nomenclature | [NLM](https://www.nlm.nih.gov/research/umls/rxnorm/) | Drug normalization, prescription matching |
-| **ICD-10/11** | Disease classification | [WHO](https://icd.who.int/) | Diagnosis coding; billing, clinical NER |
-| **LOINC** | Lab observations | [loinc.org](https://loinc.org/) | Lab test naming, clinical data standardization |
-| **ChEMBL** | Bioactive molecules | [ebi.ac.uk](https://www.ebi.ac.uk/chembl/) | Drug discovery, molecular properties |
-| **DrugBank** | Drug data | [drugbank.com](https://www.drugbank.com/) | Drug interactions, pharmacology |
-| **PubMed** | Biomedical literature | [pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/) | 36M+ citations; primary literature source |
-| **ClinicalTrials.gov** | Clinical trials | [clinicaltrials.gov](https://clinicaltrials.gov/) | Trial data, drug development pipeline |
+- [ChEMBL](https://www.ebi.ac.uk/chembl/) - Bioactive molecules. Drug discovery, molecular properties.
+- [ClinicalTrials.gov](https://clinicaltrials.gov/) - Clinical trials. Trial data, drug development pipeline.
+- [DrugBank](https://www.drugbank.com/) - Drug data. Drug interactions, pharmacology.
+- [ICD-10/11](https://icd.who.int/) - Disease classification. Diagnosis coding; billing, clinical NER.
+- [LOINC](https://loinc.org/) - Lab observations. Lab test naming, clinical data standardization.
+- [MedDRA](https://www.meddra.org/) - Adverse drug reactions. Pharmacovigilance, ADR coding; updates twice yearly.
+- [PubMed](https://pubmed.ncbi.nlm.nih.gov/) - Biomedical literature. 36M+ citations; primary literature source.
+- [RxNorm](https://www.nlm.nih.gov/research/umls/rxnorm/) - Drug nomenclature. Drug normalization, prescription matching.
+- [SNOMED CT](https://www.snomed.org/) - Clinical terminology. Clinical notes, EHR coding.
+- [UMLS](https://www.nlm.nih.gov/research/umls/) - Unified Medical Language System. General biomedical concept mapping; requires license (free for research).
 
 ## Courses & Tutorials
 
-| Resource | Focus | Link |
-|---|---|---|
-| AMIA Informatics Summit tutorials | Clinical NLP, AI in healthcare | [amia.org](https://amia.org/) |
-| BioNLP workshop tutorials (ACL) | Biomedical NLP methods | [aclanthology.org](https://aclanthology.org/venues/bionlp/) |
-| Stanford CS25 Transformers | LLM foundations | [stanford.edu](https://web.stanford.edu/class/cs25/) |
-| Stanford BMI 215 | Biomedical informatics | [stanford.edu](https://bmi.stanford.edu/) |
-| DeepLearning.AI Drug Discovery | AI for drug discovery | [deeplearning.ai](https://www.deeplearning.ai/) |
+- [AMIA Informatics Summit tutorials](https://amia.org/) - Clinical NLP, AI in healthcare.
+- [BioNLP workshop tutorials (ACL)](https://aclanthology.org/venues/bionlp/) - Biomedical NLP methods.
+- [DeepLearning.AI Drug Discovery](https://www.deeplearning.ai/) - AI for drug discovery.
+- [Stanford BMI 215](https://bmi.stanford.edu/) - Biomedical informatics.
+- [Stanford CS25 Transformers](https://web.stanford.edu/class/cs25/) - LLM foundations.
 
 ## Glossary
 
 For ML practitioners entering biomedicine.
 
-| Term | Meaning |
-|---|---|
-| EHR | Electronic Health Record — patient's digital medical record |
-| MIMIC | Medical Information Mart for Intensive Care — critical care database |
-| ADR | Adverse Drug Reaction |
-| NER | Named Entity Recognition — identifying medical entities in text |
-| RE | Relation Extraction — finding relationships between entities (e.g., drug–disease) |
-| Pharmacovigilance | Detection and prevention of adverse drug effects |
-| SMILES | Simplified Molecular-Input Line-Entry System — text representation of molecules |
-| scRNA-seq | Single-cell RNA sequencing — gene expression at individual cell level |
-| FDA label | Official prescribing information approved by the US FDA |
-| USMLE | US Medical Licensing Examination — benchmark for medical LLMs |
-| CITI training | Required ethics training for accessing clinical data (HIPAA, human subjects) |
-| HIPAA | Health Insurance Portability and Accountability Act — US health privacy law |
+- ADR - Adverse Drug Reaction.
+- CITI training - Required ethics training for accessing clinical data (HIPAA, human subjects).
+- EHR - Electronic Health Record — patient's digital medical record.
+- FDA label - Official prescribing information approved by the US FDA.
+- HIPAA - Health Insurance Portability and Accountability Act — US health privacy law.
+- MIMIC - Medical Information Mart for Intensive Care — critical care database.
+- NER - Named Entity Recognition — identifying medical entities in text.
+- Pharmacovigilance - Detection and prevention of adverse drug effects.
+- RE - Relation Extraction — finding relationships between entities (e.g., drug-disease).
+- scRNA-seq - Single-cell RNA sequencing — gene expression at individual cell level.
+- SMILES - Simplified Molecular-Input Line-Entry System — text representation of molecules.
+- USMLE - US Medical Licensing Examination — benchmark for medical LLMs.
 
 ---
 
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines. Suggest additions via [issues](https://github.com/infonality/awesome-llm-biomedicine/issues/new) or submit a pull request.
-
-## License
-
-[CC0 1.0 (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/)
-
----
-
-*Last updated: July 2026 · Maintained by [@infonality](https://github.com/infonality)*
