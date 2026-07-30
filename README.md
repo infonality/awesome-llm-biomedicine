@@ -2,7 +2,7 @@
 
 A curated list of large language models, datasets, tools, and benchmarks for biomedical and clinical applications — covering clinical text understanding, drug discovery, genomics, protein science, and healthcare AI.
 
-Maintained by [Carson Tao](https://nlp.sh/carson) · PRs welcome · [Suggest a resource](https://github.com/infonality/awesome-llm-biomedicine/issues/new)
+Maintained by [@infonality](https://github.com/infonality) · PRs welcome · [Suggest a resource](https://github.com/infonality/awesome-llm-biomedicine/issues/new)
 
 ---
 
@@ -200,4 +200,4 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines. Suggest additions via [is
 
 ---
 
-*Last updated: July 2026 · Maintained by [Carson Tao](https://nlp.sh/carson) · [Google Scholar](https://scholar.google.com/citations?user=KBHcy00AAAAJ)*
+*Last updated: July 2026 · Maintained by [@infonality](https://github.com/infonality)*

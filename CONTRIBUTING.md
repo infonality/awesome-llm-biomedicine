@@ -55,4 +55,4 @@ All submissions are reviewed by the maintainer. We aim to review within 1-2 week
 
 ## Questions?
 
-Open an issue or contact [Carson Tao](https://nlp.sh/carson).
+Open an issue or contact [@infonality](https://github.com/infonality).
