@@ -1,8 +1,6 @@
 # Awesome LLM for Biomedicine
 
-[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
-
-A curated list of large language models, datasets, tools, and benchmarks for biomedical and clinical applications — covering clinical text understanding, drug discovery, genomics, protein science, and healthcare AI.
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) — A curated list of large language models, datasets, tools, and benchmarks for biomedical and clinical applications — covering clinical text understanding, drug discovery, genomics, protein science, and healthcare AI.
 
 PRs welcome — [suggest a resource](https://github.com/infonality/awesome-llm-biomedicine/issues/new).
 
@@ -79,7 +77,7 @@ Models for molecular property prediction, drug-drug interaction, and chemical ge
 - [MedQA (USMLE)](https://github.com/jind11/MedQA) - QA. 12.7K questions. US medical licensing exam questions.
 - [MIMIC-III / MIMIC-IV](https://physionet.org/content/mimiciv/) - Clinical notes, tables. 2M+ notes. Most-used clinical text corpus; requires training + CITI.
 - [MMLU (medical subsets)](https://github.com/hendrycks/test) - MCQ. 1K+ per subject. Clinical knowledge evaluation; widely used in LLM benchmarks.
-- [n2c2 / i2b2](https://portal.dbmi.hms.harvard.edu/projects/n2c2-2024/) - NER, RE, coreference. ~1,000 notes each year. Historical shared tasks; clinical notes.
+- [n2c2 / i2b2 datasets](https://portal.dbmi.hms.harvard.edu/projects/n2c2-2024/) - NER, RE, coreference. ~1,000 notes each year. Historical shared tasks; clinical notes.
 - [PubMedQA](https://github.com/pubmedqa/pubmedqa) - QA. 1K expert + 211K unlabeled. QA over PubMed abstracts.
 
 ### Relation Extraction & Drug Interactions
@@ -88,7 +86,7 @@ Models for molecular property prediction, drug-drug interaction, and chemical ge
 - [ChemProt](https://github.com/arwhirang/recursive_chemprot) - Chemical-protein RE. 1,820 abstracts.
 - [DDI (DrugBank)](https://github.com/ncbi-nlp/DDIExtraction2013) - Drug-drug interaction. 792 documents.
 - [EU-ADR](https://github.com/madmanc/EU-ADR-corpus) - Drug-adverse effect. 3,000 sentences.
-- [GAD](https://github.com/dmis-lab/biobert) - Gene-disease association. 5,330 sentences.
+- [GAD](https://github.com/AskNowQA/gad) - Gene-disease association. 5,330 sentences.
 
 ### Genomics
 
@@ -98,11 +96,11 @@ Models for molecular property prediction, drug-drug interaction, and chemical ge
 
 ## Shared Tasks & Challenges
 
-- [BioASQ Challenge](http://bioasq.org/) - Biomedical QA and retrieval. 2013-present.
+- [BioASQ Challenge](https://github.com/bioasq/bioasq-benchmark) - Biomedical QA and retrieval. 2013-present.
 - [BioNLP Shared Task](https://github.com/openbiomedicalnlp/bionlp-st) - Event extraction from biomedical text. 2009-2023.
 - [MEDIQA](https://github.com/abachaa/MEDIQA) - Medical text generation and summarization. 2019-2024.
 - [MedNLI](https://github.com/jgc128/mednli) - Natural language inference in clinical text. 2018.
-- [n2c2 / i2b2](https://portal.dbmi.hms.harvard.edu/projects/n2c2-2024/) - Clinical NLP challenges. 2007-present.
+- [n2c2 / i2b2 challenges](https://portal.dbmi.hms.harvard.edu/projects/n2c2-2024/) - Clinical NLP challenges. 2007-present.
 - [TAC ADR Extraction](https://tac.nist.gov/2017/ADRF/) - ADR extraction from drug labels. 2017.
 
 ## Tools & Libraries
@@ -110,7 +108,7 @@ Models for molecular property prediction, drug-drug interaction, and chemical ge
 - [BERN2](https://github.com/dl4ds/bernal) - Biomedical NER. Multi-type entity recognition (disease, drug, gene, etc.).
 - [BigBIO](https://github.com/bigscience-workshop/biomedical) - Dataset loading. Unified access to 160+ biomedical datasets.
 - [BioC](https://github.com/biocreative/bioc) - Biomedical text format. XML/JSON interchange format for biomedical text.
-- [BioGPT inference](https://github.com/microsoft/BioGPT) - Text generation. Microsoft's biomedical generative model.
+- [BioGPT inference](https://huggingface.co/microsoft/biogpt) - Text generation. Microsoft's biomedical generative model.
 - [cTAKES](https://ctakes.apache.org/) - Clinical NLP. Clinical Text Analysis Knowledge Extraction System.
 - [MedSpaCy](https://github.com/medspacy/medspacy) - Clinical NLP pipeline. Clinical text processing, section detection.
 - [scispaCy](https://github.com/allenai/scispacy) - Biomedical NLP pipeline. spaCy models for biomedical NER, linking.
@@ -186,4 +184,4 @@ For ML practitioners entering biomedicine.
 
 ## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines. Suggest additions via [issues](https://github.com/infonality/awesome-llm-biomedicine/issues/new) or submit a pull request.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines. Suggest additions via [issues](https://github.com/infonality/awesome-llm-biomedicine/issues) or submit a pull request.
