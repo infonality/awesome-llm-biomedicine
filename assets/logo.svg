@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <rect width="200" height="200" rx="20" fill="#0f1115"/>
+  <circle cx="100" cy="80" r="35" fill="none" stroke="#93c5fd" stroke-width="4"/>
+  <path d="M 70 80 Q 100 110 130 80" fill="none" stroke="#93c5fd" stroke-width="3"/>
+  <path d="M 100 45 L 100 115" stroke="#93c5fd" stroke-width="2" opacity="0.5"/>
+  <rect x="40" y="130" width="120" height="8" rx="4" fill="#93c5fd" opacity="0.3"/>
+  <rect x="40" y="145" width="90" height="8" rx="4" fill="#93c5fd" opacity="0.2"/>
+  <rect x="40" y="160" width="105" height="8" rx="4" fill="#93c5fd" opacity="0.15"/>
+  <text x="100" y="185" font-family="monospace" font-size="10" fill="#6b7280" text-anchor="middle">LLM × BIOMED</text>
+</svg>

@@ -1,5 +1,9 @@
 # Awesome LLM for Biomedicine [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
+<img src="assets/logo.svg" align="right" width="120">
+
+Large language models, datasets, tools, and benchmarks for biomedical and clinical applications.
+
 PRs welcome — [suggest a resource](https://github.com/infonality/awesome-llm-biomedicine/issues/new).
 
 ---
@@ -91,7 +95,7 @@ Models for molecular property prediction, drug-drug interaction, and chemical ge
 - [ChemProt](https://github.com/arwhirang/recursive_chemprot) - Chemical-protein RE. 1,820 abstracts.
 - [DDI Corpus](https://github.com/yardstick17/DDIExtraction) - Drug-drug interaction. 792 documents.
 - [EU-ADR](https://github.com/mi-erasmusmc/EU-ADR-Corpus) - Drug-adverse effect. 3,000 sentences.
-- [GAD (Genetic Association Database)](https://ctdbase.org/) - Gene-disease association. 5,330+ sentences. Curated by CTD.
+- [GAD (Genetic Association Database)](https://academic.oup.com/bioinformatics/article/25/18/2486/194116) - Gene-disease association. 5,330+ sentences.
 
 ### Genomics
 
@@ -146,7 +150,6 @@ Models for molecular property prediction, drug-drug interaction, and chemical ge
 
 - Clinical safety evaluation: Omiye et al. (2023). Large language models propagate race-based medicine. [Nature](https://www.nature.com/articles/d41586-023-02261-3)
 - Med-HALT: Pal et al. (2024). Med-HALT: Medical Domain Hallucination Test for Large Language Models. [arXiv:2307.15389](https://arxiv.org/abs/2307.15389)
-- MultiMedQA: Singhal et al. (2023). Towards Expert-Level Medical Question Answering with Large Language Models. [arXiv:2305.09617](https://arxiv.org/abs/2305.09617)
 
 ## Ontologies & Knowledge Bases
 
@@ -167,7 +170,7 @@ Essential for any biomedical NLP/LLM practitioner entering the field.
 ## Courses & Tutorials
 
 - [AMIA Informatics Summit tutorials](https://amia.org/) - Clinical NLP, AI in healthcare.
-- [BioNLP workshop tutorials (ACL)](https://aclanthology.org/venues/bionlp/) - Biomedical NLP methods.
+- [BioNLP workshop tutorials (ACL)](https://aclanthology.org/2023.bionlp-1/) - Biomedical NLP methods.
 - [DeepLearning.AI Drug Discovery](https://www.deeplearning.ai/) - AI for drug discovery.
 - [Stanford BMI 215](https://bmi.stanford.edu/) - Biomedical informatics.
 - [Stanford CS25 Transformers](https://web.stanford.edu/class/cs25/) - LLM foundations.
