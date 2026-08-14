@@ -11,11 +11,13 @@ PRs welcome — [suggest a resource](https://github.com/infonality/awesome-llm-b
 ## Contents
 
 - [Clinical LLMs](#clinical-llms)
+- [Vision-Language Models](#vision-language-models)
 - [Genomics LLMs](#genomics-llms)
 - [Drug Discovery & Molecular LLMs](#drug-discovery--molecular-llms)
 - [Protein & Structural Biology LLMs](#protein--structural-biology-llms)
 - [Benchmarks & Datasets](#benchmarks--datasets)
 - [Shared Tasks & Challenges](#shared-tasks--challenges)
+- [LLM Agents & Toolkits](#llm-agents--toolkits)
 - [Tools & Libraries](#tools--libraries)
 - [Key Papers](#key-papers)
 - [Ontologies & Knowledge Bases](#ontologies--knowledge-bases)
@@ -33,16 +35,27 @@ Pre-trained models fine-tuned on clinical notes, EHR data, and medical literatur
 - [BioMedLM (PubMedGPT)](https://huggingface.co/stanford-crfm/BioMedLM) - 2.7B params. Stanford CRFM; domain-specific from scratch.
 - [BioMistral](https://huggingface.co/BioMistral/BioMistral-7B) - 7B params. PubMed Central. Mistral-based open biomedical LLM.
 - [ClinicalBERT](https://huggingface.co/emilyalsentzer/Bio_ClinicalBERT) - 110M params. MIMIC-III discharge summaries. BERT fine-tuned on clinical notes.
-- [Clinical-Camel](https://github.com/epfLLM/meditron) - 7B/13B/70B params. Clinical domain adaptation of LLaMA-2.
 - [ClinicalLongformer](https://huggingface.co/yikao810/ClinicalLongformer) - 4K context. Clinical notes. Long-context clinical model for full notes.
 - [GatorTron](https://arxiv.org/abs/2203.03560) - 3.9B/8.9B params. 90B tokens (clinical + PubMed). Large clinical model from UF Health.
 - [HuatuoGPT](https://github.com/FreedomIntelligence/HuatuoGPT) - 7B/13B/33B params. Chinese medical LLM fine-tuned on real physician dialogues.
+- [HuatuoGPT-II](https://github.com/FreedomIntelligence/HuatuoGPT-II) - 7B/13B/34B params. One-stage medical adaptation; SOTA on Chinese medical benchmarks.
 - [Med-PaLM 2](https://arxiv.org/abs/2305.09617) - Google's medical LLM. Achieves USMLE-level performance; not open-weight.
+- [MedGemma](https://github.com/google-health/medgemma) - 4B/27B params. Google's open-weight medical LLM built on Gemma 3. The 4B variant is multimodal (text + medical imaging); 27B is text-only.
 - [MEDITRON](https://huggingface.co/epfl-llm/meditron-7b) - 7B/70B params. Medical papers + guidelines. EPFL; open-weight, clinical reasoning.
-- [MedLlama (ClinicalBERT)](https://huggingface.co/medicalai/ClinicalBERT) - Clinical NLP models from medicalai.
+- [MedLlama](https://huggingface.co/medicalai/ClinicalBERT) - Clinical NLP models from medicalai.
+- [MMedLM 2](https://github.com/MAGIC-AI4Med/MMedLM) - Multilingual medical LLM. Supports 8 languages; trained on 25.5B tokens of multilingual medical corpus. Nature Communications.
 - [OpenBioLLM](https://huggingface.co/aaditya/OpenBioLLM-Llama3-8B) - 8B/70B params. Llama-3 fine-tuned on biomedical data. Achieves strong results on medical benchmarks.
 - [PMC-LLaMA](https://huggingface.co/axiong/PMC_LLaMA_13B) - 7B/13B params. PubMed Central. LLaMA fine-tuned on biomedical literature.
 - [PubMedBERT](https://huggingface.co/microsoft/PubMedBERT) - 110M params. PubMed abstracts (from scratch). Strong baseline for biomedical NLP.
+
+## Vision-Language Models
+
+Multimodal models for biomedical imaging, radiology, pathology, and medical visual question answering.
+
+- [BiomedCLIP](https://huggingface.co/microsoft/BiomedCLIP-PubMedBERT_256-vit_base_patch16_224) - Biomedical vision-language foundation model pretrained on PMC-15M (15M image-text pairs). PubMedBERT text encoder + ViT image encoder.
+- [BiomedGPT](https://github.com/taokz/BiomedGPT) - Generalist vision-language foundation model for diverse biomedical tasks. Nature Medicine 2024.
+- [HuatuoGPT-Vision](https://github.com/FreedomIntelligence/HuatuoGPT-Vision) - Medical multimodal LLM. Injects medical visual knowledge at scale; 7B/34B params.
+- [LLaVA-Med](https://github.com/microsoft/LLaVA-Med) - Biomedical vision-language assistant trained on PMC-15M. Curriculum learning for medical VQA. Microsoft Research.
 
 ## Genomics LLMs
 
@@ -71,7 +84,7 @@ Models for molecular property prediction, drug-drug interaction, and chemical ge
 ## Protein & Structural Biology LLMs
 
 - [ESM-2](https://github.com/facebookresearch/esm) - 650M-15B params. Protein sequences. Meta's protein language model; structure prediction.
-- [ESM3](https://www.evolutionaryscale.ai/blog/esm3-release) - Protein language model from EvolutionaryScale. (See also: [ESM-2](https://github.com/facebookresearch/esm))
+- [ESM3](https://www.evolutionaryscale.ai/blog/esm3-release) - Protein language model from EvolutionaryScale for generative protein design.
 - [ProGen2](https://github.com/anonymized-research/progen2) - 6.4B-151B params. Protein sequences. Generative protein design model.
 - [ProtTrans](https://huggingface.co/Rostlab/prot_bert_bfd) - 420M-3B params. Protein sequences. Transformer for protein sequences.
 - [RoseTTAFold](https://github.com/RosettaCommons/RoseTTAFold) - Protein structure. 3D protein structure prediction (non-LLM but essential).
@@ -85,6 +98,7 @@ Models for molecular property prediction, drug-drug interaction, and chemical ge
 - [BlueBERT benchmark suite](https://github.com/ncbi-nlp/BlueBERT) - Multiple tasks. NCBI's benchmark suite for biomedical language understanding.
 - [MedQA (USMLE)](https://github.com/jind11/MedQA) - QA. 12.7K questions. US medical licensing exam questions.
 - [MedMCQA](https://github.com/MedMCQA/MedMCQA) - QA. 194K questions. Indian medical entrance exam MCQs.
+- [MedXpertQA](https://github.com/TsinghuaC3I/MedXpertQA) - QA. 4,460 questions. Expert-level medical reasoning benchmark. ICML 2025. Text and multimodal subsets.
 - [MIMIC-III / MIMIC-IV](https://physionet.org/content/mimiciv/) - Clinical notes, tables. 2M+ notes. Most-used clinical text corpus; requires training + CITI.
 - [MMLU (medical subsets)](https://github.com/hendrycks/test) - MCQ. 1K+ per subject. Clinical knowledge evaluation; widely used in LLM benchmarks.
 - [PubMedQA](https://github.com/pubmedqa/pubmedqa) - QA. 1K expert + 211K unlabeled. QA over PubMed abstracts.
@@ -103,6 +117,10 @@ Models for molecular property prediction, drug-drug interaction, and chemical ge
 - [GEO](https://www.ncbi.nlm.nih.gov/geo/) - Gene expression. 20M+ samples. Gene Expression Omnibus.
 - [Tabula Sapiens](https://tabula-sapiens.ds.czbiohub.org/) - scRNA-seq. 500K+ cells. Multi-organ human cell atlas.
 
+### Agent Benchmarks
+
+- [MedAgentBench](https://stanfordmlgroup.github.io/projects/medagentbench) - Agent evaluation. 300 physician-written tasks across 10 categories. FHIR-compliant EHR environment.
+
 ## Shared Tasks & Challenges
 
 - [BioASQ Challenge](https://github.com/dmis-lab/bioasq-biobert) - Biomedical QA and retrieval. 2013-present.
@@ -111,6 +129,12 @@ Models for molecular property prediction, drug-drug interaction, and chemical ge
 - [MedNLI](https://github.com/jgc128/mednli) - Natural language inference in clinical text. 2018.
 - [n2c2 / i2b2 challenges](https://portal.dbmi.hms.harvard.edu/projects/n2c2-2024/) - Clinical NLP challenges. 2007-present.
 - [TAC ADR Extraction](https://tac.nist.gov/) - ADR extraction from drug labels. 2017. (NIST TAC archive)
+
+## LLM Agents & Toolkits
+
+LLM-based agents for clinical reasoning, therapeutic decision-making, and medical research.
+
+- [TxAgent](https://github.com/mims-harvard/TxAgent) - AI agent for therapeutic reasoning. Multi-step reasoning with 211 biomedical tools. Harvard; outperforms GPT-4o on drug reasoning tasks.
 
 ## Tools & Libraries
 
@@ -131,9 +155,17 @@ Models for molecular property prediction, drug-drug interaction, and chemical ge
 - ClinicalBERT: Alsentzer et al. (2019). Publicly Available Clinical BERT Embeddings. [arXiv:1904.03323](https://arxiv.org/abs/1904.03323)
 - HuatuoGPT: Zhang et al. (2023). HuatuoGPT, towards Taming Language Model to Be a Doctor. [arXiv:2305.15075](https://arxiv.org/abs/2305.15075)
 - Med-PaLM: Singhal et al. (2023). Large language models encode clinical knowledge. [arXiv:2212.13138](https://arxiv.org/abs/2212.13138)
+- MedGemma: Golden et al. (2025). MedGemma: Open Weight Medical LLMs. [arXiv:2507.05201](https://arxiv.org/abs/2507.05201)
 - MEDITRON: Chen et al. (2023). MEDITRON-70B: Scaling Medical Pretraining of Language Models. [arXiv:2311.18279](https://arxiv.org/abs/2311.18279)
+- MMedLM: Qiu et al. (2024). Towards Building Multilingual Language Model for Medicine. [Nature Communications](https://www.nature.com/articles/s41467-024-52417-z)
 - OpenBioLLM: Rahman et al. (2024). OpenBioLLM: Leveraging Open Access Data to Build Specialized Medical LLMs. [arXiv:2405.17364](https://arxiv.org/abs/2405.17364)
 - PubMedBERT: Gu et al. (2021). Domain-Specific Language Model Pretraining for Biomedical Natural Language Processing. [arXiv:2007.15779](https://arxiv.org/abs/2007.15779)
+
+### Vision-Language Models
+
+- BiomedCLIP: Zhang et al. (2024). Large-Scale Domain-Specific Pretraining for Biomedical Vision-Language Processing. [arXiv:2303.00915](https://arxiv.org/abs/2303.00915)
+- BiomedGPT: Zhang et al. (2024). A generalist vision-language foundation model for diverse biomedical tasks. [Nature Medicine](https://www.nature.com/articles/s41591-024-03185-2)
+- LLaVA-Med: Li et al. (2023). LLaVA-Med: Training a Large Language-and-Vision Assistant for Biomedicine in One Day. [arXiv:2306.00890](https://arxiv.org/abs/2306.00890)
 
 ### Genomics LLMs
 
@@ -150,6 +182,11 @@ Models for molecular property prediction, drug-drug interaction, and chemical ge
 
 - Clinical safety evaluation: Omiye et al. (2023). Large language models propagate race-based medicine. [Nature](https://www.nature.com/articles/d41586-023-02261-3)
 - Med-HALT: Pal et al. (2024). Med-HALT: Medical Domain Hallucination Test for Large Language Models. [arXiv:2307.15389](https://arxiv.org/abs/2307.15389)
+- MedXpertQA: Zuo et al. (2025). MedXpertQA: Benchmarking Expert-Level Medical Reasoning and Understanding. [arXiv:2501.18362](https://arxiv.org/abs/2501.18362)
+
+### LLM Agents
+
+- TxAgent: Gao et al. (2025). TxAgent: An AI Agent for Therapeutic Reasoning Across a Universe of Tools. [arXiv:2503.10970](https://arxiv.org/abs/2503.10970)
 
 ## Ontologies & Knowledge Bases
 
