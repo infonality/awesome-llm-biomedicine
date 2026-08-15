@@ -1,58 +1,53 @@
 # Contributing to Awesome LLM for Biomedicine
 
-Thank you for your interest in contributing! This list aims to be the most useful curated resource for LLMs in biomedicine. 
+Thank you for helping keep this list useful. It is a curated research and engineering resource for biomedical and clinical language models, datasets, tools, benchmarks, and papers.
 
-## What we're looking for
+## What belongs here
 
-- **New models** — recently published biomedical/clinical LLMs with open weights or notable closed models
-- **New datasets** — benchmark datasets for biomedical NLP, clinical text, genomics, drug discovery
-- **New tools** — libraries, pipelines, or frameworks that help practitioners build biomedical LLM systems
-- **Key papers** — influential papers that define or advance the field (not every paper — ones that matter)
-- **Corrections** — if something is outdated, mislabeled, or broken, please submit a fix
+- **Models** — biomedical, clinical, molecular, protein, genomics, or medical vision-language models.
+- **Datasets and benchmarks** — resources with documented provenance, tasks, and access requirements.
+- **Tools** — libraries, pipelines, agent frameworks, or formats that support biomedical LLM work.
+- **Papers** — influential work that defines or advances the field.
+- **Corrections** — outdated descriptions, broken links, misplaced entries, or licensing/access notes.
 
-## What we're NOT looking for
+General-purpose resources without a clear biomedical use case do not belong here. Closed models may be included when they are important to the field, but the entry should say when a model is not open-weight.
 
-- General-purpose LLM papers/models with no biomedical application
-- Non-peer-reviewed blog posts (unless they're from recognized research groups)
-- Datasets that are not publicly accessible (even if described in papers)
-- Self-promotional entries with no community adoption
+## Before opening a pull request
 
-## How to contribute
+Please check that:
 
-### Submitting a resource
+- The resource is not already listed under another name or section.
+- The primary link is stable and points to an official project page, model card, dataset page, or paper.
+- The description explains the biomedical use case in one concise line.
+- Claims such as parameter counts, dataset sizes, benchmark results, and access requirements are supported by the linked source.
+- The entry is placed in the most specific existing section.
+- New or changed links work, and the README keeps its current bullet-list format.
 
-1. Check the list to make sure it's not already included
-2. Open an [issue](https://github.com/infonality/awesome-llm-biomedicine/issues/new) with:
-   - Resource name
-   - Link (GitHub, Hugging Face, or paper)
-   - One-line description
-   - Which section it belongs in
+For a local lint check, run:
 
-### Submitting a pull request
+```bash
+npx --yes awesome-lint README.md
+```
 
-1. Fork the repository
-2. Add your entry to the appropriate section in `README.md`
-3. Follow the existing table format
-4. Keep descriptions concise — one line maximum
-5. Ensure all links work
-6. Open a pull request with a clear title
+## How to submit a resource
 
-## Formatting guidelines
+1. Open an issue using the resource-suggestion template, or fork the repository and create a branch.
+2. Add one bullet to the appropriate section of `README.md`.
+3. Keep the description to one line and avoid marketing language or unsupported superlatives.
+4. Open a pull request with a descriptive title and enough context for review.
 
-- Use the existing table format for each section
-- Links should point to the most stable URL (GitHub repo > Hugging Face > arXiv > paper DOI)
-- For models: include parameter count and pre-training data
-- For datasets: include size and access requirements
-- For papers: include year, full title, and link to open-access version when possible
+Suggested entry pattern:
 
-## Review process
+```markdown
+- [Resource](https://example.org) - Task or domain. One concise description of what it provides.
+```
 
-All submissions are reviewed by the maintainer. We aim to review within 1-2 weeks. Not all submissions will be accepted — we prioritize resources that are:
-- Openly accessible
-- Actively maintained (for tools/models)
-- Widely cited or adopted (for papers/datasets)
-- Relevant to the biomedical LLM community
+For models, include parameter count or pretraining data only when the source documents it. For datasets, include the task and meaningful size or access requirements when known. For papers, include the year, full title, and an open-access link when available.
 
-## Questions?
+## Review principles
 
-Open an issue or contact [@infonality](https://github.com/infonality).
+Submissions are reviewed for relevance, clarity, source quality, public accessibility, and whether they add something distinct from an existing entry. The list does not rank resources, endorse clinical use, or replace independent safety, privacy, regulatory, or licensing review.
+
+## Questions
+
+Open an [issue](https://github.com/infonality/awesome-llm-biomedicine/issues) if you are unsure where a resource belongs or whether an entry needs updating.

@@ -1,0 +1,61 @@
+name: Resource suggestion
+description: Suggest a biomedical LLM, dataset, benchmark, paper, or tool.
+title: "[Resource] "
+labels:
+  - resource
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve the list. Please provide an official project page, model card, dataset page, or paper where possible.
+  - type: input
+    id: name
+    attributes:
+      label: Resource name
+      placeholder: Example: MedExample
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Primary link
+      description: Prefer the official repository, model card, dataset page, or paper.
+      placeholder: https://...
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Suggested section
+      options:
+        - Clinical LLMs
+        - Vision-Language Models
+        - Genomics LLMs
+        - Drug Discovery & Molecular LLMs
+        - Protein & Structural Biology Models
+        - Benchmarks & Datasets
+        - Shared Tasks & Challenges
+        - LLM Agents & Toolkits
+        - Tools & Libraries
+        - Key Papers
+        - Ontologies & Knowledge Bases
+        - Courses & Tutorials
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Suggested one-line description
+      description: Explain the biomedical use case and include documented facts only.
+      placeholder: Task or domain. Concise description of what it provides.
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checklist
+      options:
+        - label: I checked that this resource is not already listed.
+          required: true
+        - label: I checked the primary link and reviewed its access or licensing requirements.
+          required: true
