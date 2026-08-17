@@ -75,8 +75,10 @@ Multimodal models for biomedical imaging, radiology, pathology, and medical visu
 
 Foundation models for single-cell RNA sequencing, DNA sequences, and genomics.
 
+- [AlphaGenome](https://github.com/google-deepmind/alphagenome_research) - 1 Mb context. DNA sequence-to-function model for regulatory variant effects across gene expression, splicing, chromatin, and 3D contacts; Apache-2.0 research code and weights subject to non-commercial model terms.
 - [Caduceus](https://github.com/kuleshov-group/caduceus) - DNA sequences. Reversible and bidirectional DNA sequence modeling.
 - [DNABERT-2](https://github.com/MAGICS-LAB/DNABERT_2) - 117M params. DNA sequences. Improved genome-understanding model.
+- [Evo 2](https://github.com/arcinstitute/evo2) - 1B–40B params. DNA sequences. Long-context language model for genome modeling and design at single-nucleotide resolution up to 1M base pairs.
 - [Geneformer](https://huggingface.co/ctheodoris/geneformer) - 95M params. scRNA-seq. Foundation model pretrained on 30M cells for network-biology tasks.
 - [HyenaDNA](https://github.com/HazyResearch/hyena-dna) - 1K–1M context. DNA sequences. Ultra-long-context genomic model.
 - [Nucleotide Transformer](https://huggingface.co/InstaDeepAI/nucleotide-transformer-2.5b-multi-species) - 500M–2.5B params. DNA sequences. Multi-species DNA foundation model.
@@ -101,6 +103,7 @@ Protein sequence, structure, and design models. This section includes important 
 
 - [ESM-2](https://github.com/facebookresearch/esm) - 650M–15B params. Protein sequences. Meta's protein language model family.
 - [ESM3](https://www.evolutionaryscale.ai/blog/esm3-release) - Protein language model from EvolutionaryScale for generative protein design.
+- [LucaOne](https://github.com/LucaOne/LucaOne) - Unified nucleic-acid and protein foundation model with code and checkpoints for sequence embeddings, classification, regression, and residue-level tasks.
 - [ProGen2](https://github.com/anonymized-research/progen2) - 6.4B–151B params. Protein sequences. Generative protein-design models.
 - [ProtTrans](https://huggingface.co/Rostlab/prot_bert_bfd) - 420M–3B params. Protein sequences. Transformer models for protein representation learning.
 - [RoseTTAFold](https://github.com/RosettaCommons/RoseTTAFold) - Protein structure. 3D protein-structure prediction; non-LLM but essential context.
@@ -112,6 +115,9 @@ Protein sequence, structure, and design models. This section includes important 
 
 - [BioASQ](https://bioasq.org/) - Biomedical question answering and retrieval benchmark; includes expert-annotated questions.
 - [BlueBERT benchmark suite](https://github.com/ncbi-nlp/BlueBERT) - Multiple tasks. NCBI benchmark suite for biomedical language understanding.
+- [BRIDGE](https://github.com/YLab-Open/BRIDGE) - Clinical text. Multilingual benchmark with 87 real-world tasks across nine languages and a continuously updated leaderboard.
+- [HealthBench](https://openai.com/index/healthbench/) - Health conversations. 5,000 realistic multi-turn conversations graded with physician-created rubrics from 262 physicians across 60 countries.
+- [LLMEval-Med](https://github.com/llmeval/LLMEval-Med) - Clinical evaluation. EMNLP 2025 benchmark of 2,996 questions from EHRs and expert-designed scenarios with physician-validated scoring.
 - [MedNLI](https://github.com/jgc128/mednli) - Natural language inference in clinical text. Clinical-premise/hypothesis benchmark.
 - [MedQA (USMLE)](https://github.com/jind11/MedQA) - QA. 12.7K questions. US medical licensing exam questions.
 - [MedMCQA](https://github.com/MedMCQA/MedMCQA) - QA. 194K questions. Indian medical entrance exam MCQs.
@@ -136,12 +142,17 @@ Protein sequence, structure, and design models. This section includes important 
 
 ### Agent Benchmarks
 
+- [ASCENT](https://proceedings.mlr.press/v333/choi26a.html) - Diagnostic reasoning. Clinician-annotated benchmark of 3,078 stepwise problems derived from MedQA-USMLE.
+- [DrugDiscoveryBench](https://github.com/scaleapi/DrugDiscoveryBench) - Drug-discovery agents. Open task and image data for computational drug-discovery workflows; reference rubrics require gated Hugging Face access.
+- [FHIR-AgentBench](https://github.com/glee4810/FHIR-AgentBench) - EHR agents. 2,931 clinical questions grounded in HL7 FHIR with released data and evaluation code; MIMIC-IV FHIR data and cloud setup are required.
 - [MedAgentBench](https://stanfordmlgroup.github.io/projects/medagentbench) - Agent evaluation. 300 physician-written tasks across 10 categories in a FHIR-compliant EHR environment.
+- [RadLE 2.0](https://crashlab.in/radle-technicalreport) - Radiology agents. Uncertainty-aware benchmark for single-image diagnosis that scores confidence, safety, accuracy, and handover readiness.
 
 ## Shared Tasks & Challenges
 
 - [BioASQ Challenge](https://github.com/dmis-lab/bioasq-biobert) - Biomedical QA and retrieval. 2013–present.
-- [BioNLP Shared Task](https://aclanthology.org/venues/bionlp/) - Event extraction from biomedical text. 2009–2023.
+- [BioNLP Shared Task](https://aclanthology.org/venues/bionlp/) - Event extraction from biomedical text. 2009–2026.
+- [MedReason Challenge 2026](https://medreason26.github.io/) - Medical multimodal reasoning. MICCAI challenge evaluating visual question answering under low-dose X-ray, 7T MRI, and other domain shifts.
 - [MEDIQA](https://github.com/abachaa/MEDIQA2019) - Medical text generation and summarization. 2019.
 - [n2c2 / i2b2 challenges](https://portal.dbmi.hms.harvard.edu/projects/n2c2-2024/) - Clinical NLP challenges. 2007–present.
 - [TAC ADR Extraction](https://tac.nist.gov/) - Adverse-drug-reaction extraction from drug labels. 2017. NIST TAC archive.
@@ -150,6 +161,7 @@ Protein sequence, structure, and design models. This section includes important 
 
 LLM-based agents and systems for clinical reasoning, therapeutic decision-making, and medical research.
 
+- [Biomni](https://github.com/snap-stanford/Biomni) - Biomedical research agent combining LLM planning, retrieval-augmented execution, and code tools across life-science tasks; sandbox generated code and review integrated-tool licenses.
 - [TxAgent](https://github.com/mims-harvard/TxAgent) - Agent for therapeutic reasoning with access to a large biomedical tool universe; Harvard.
 
 ## Tools & Libraries
@@ -187,6 +199,12 @@ LLM-based agents and systems for clinical reasoning, therapeutic decision-making
 - Geneformer: Theodoris et al. (2023). Transfer learning enables predictions in network biology. [Nature](https://www.nature.com/articles/s41586-023-06139-9)
 - Nucleotide Transformer: Dalla-Torre et al. (2024). The Nucleotide Transformer: Building and Evaluating Robust Foundation Models for Human Genomics. [Nature Methods](https://www.nature.com/articles/s41592-024-02330-3)
 - scGPT: Cui et al. (2024). scGPT: Toward Building a Foundation Model for Single-Cell Multi-omics Using Single-Cell Transcriptomics. [Nature Methods](https://www.nature.com/articles/s41592-024-02205-7)
+- AlphaGenome: Avsec et al. (2026). Advancing regulatory variant effect prediction with AlphaGenome. [Nature](https://www.nature.com/articles/s41586-025-10014-0)
+- Evo 2: Brixi et al. (2026). Genome modeling and design across all domains of life with Evo 2. [Nature](https://doi.org/10.1038/s41586-026-10176-5)
+
+### Protein & Structural Biology
+
+- LucaOne: He et al. (2025). Generalized biological foundation model with unified nucleic acid and protein language. [Nature Machine Intelligence](https://doi.org/10.1038/s42256-025-01044-4)
 
 ### Drug Discovery
 
@@ -196,11 +214,16 @@ LLM-based agents and systems for clinical reasoning, therapeutic decision-making
 ### Evaluation & Safety
 
 - Clinical safety evaluation: Omiye et al. (2023). Large language models propagate race-based medicine. [Nature](https://www.nature.com/articles/d41586-023-02261-3)
+- BRIDGE: Wu et al. (2026). BRIDGE: Benchmarking Large Language Models for Understanding Real-world Clinical Practice Text. [arXiv:2504.19467](https://arxiv.org/abs/2504.19467)
+- HealthBench: Arora et al. (2025). HealthBench: Evaluating Large Language Models Towards Improved Human Health. [arXiv:2505.08775](https://arxiv.org/abs/2505.08775)
+- MedFailBench: Ozkan (2026). MedFailBench: A Clinician-Built Open-Source Benchmark for Medical AI Safety Boundary Inspection. [arXiv:2607.15166](https://arxiv.org/abs/2607.15166)
 - Med-HALT: Pal et al. (2024). Med-HALT: Medical Domain Hallucination Test for Large Language Models. [arXiv:2307.15389](https://arxiv.org/abs/2307.15389)
 - MedXpertQA: Zuo et al. (2025). MedXpertQA: Benchmarking Expert-Level Medical Reasoning and Understanding. [arXiv:2501.18362](https://arxiv.org/abs/2501.18362)
 
 ### LLM Agents
 
+- ASCENT: Choi et al. (2026). ASCENT: A Benchmark for Evaluating and Advancing Stepwise Diagnostic Reasoning in Large Language Models on Common Clinical Scenarios. [Open PDF](https://raw.githubusercontent.com/mlresearch/v333/main/assets/choi26a/choi26a.pdf)
+- FHIR-AgentBench: Lee et al. (2025). FHIR-AgentBench: Benchmarking LLM Agents for Realistic Interoperable EHR Question Answering. [arXiv:2509.19319](https://arxiv.org/abs/2509.19319)
 - TxAgent: Gao et al. (2025). TxAgent: An AI Agent for Therapeutic Reasoning Across a Universe of Tools. [arXiv:2503.10970](https://arxiv.org/abs/2503.10970)
 
 ## Ontologies & Knowledge Bases
