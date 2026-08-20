@@ -92,7 +92,6 @@ Models for molecular property prediction, drug–drug interaction, retrosynthesi
 
 - [ChemBERTa](https://huggingface.co/seyonec/ChemBERTa-zinc-base-v1) - SMILES molecules. RoBERTa for molecular property prediction.
 - [Chemformer](https://github.com/MolecularAI/Chemformer) - SMILES to reactions. Transformer for retrosynthesis.
-- [Galactica](https://huggingface.co/facebook/galactica-120b) - Scientific text + molecules. Meta's science LLM; deprecated but influential.
 - [MolT5](https://github.com/blender-nlp/MolT5) - Molecule to text. T5 model for molecule captioning and generation.
 - [MolReGPT](https://arxiv.org/abs/2310.17341) - LLM-based molecular generation through prompt engineering with SMILES.
 - [Uni-Mol](https://github.com/dptech-corp/Uni-Mol) - 3D molecular representation model for drug-discovery tasks.
