@@ -1,8 +1,10 @@
-# Awesome LLM for Biomedicine [![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![License: CC0 1.0](https://img.shields.io/badge/License-CC0%201.0-lightgrey.svg)](LICENSE)
+# Awesome LLMs for Biomedicine [![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![License: CC0 1.0](https://img.shields.io/badge/License-CC0%201.0-lightgrey.svg)](LICENSE)
 
-![Biomedical AI research banner](assets/banner.png)
+[![Biomedical AI research banner](assets/banner.png)](https://github.com/infonality/awesome-llm-biomedicine#readme)
 
-A curated list of large language models, datasets, tools, benchmarks, and papers for biomedical and clinical applications.
+Large language models, datasets, tools, benchmarks, and papers for biomedical and clinical applications.
+
+I maintain this list from more than 15 years of work in the field, including experience organizing the n2c2/i2b2 shared tasks.
 
 PRs welcome — [suggest a resource](https://github.com/infonality/awesome-llm-biomedicine/issues/new).
 
@@ -33,7 +35,7 @@ PRs welcome — [suggest a resource](https://github.com/infonality/awesome-llm-b
 
 This list focuses on resources that apply language-modeling or foundation-model techniques to biomedicine, clinical practice, biomedical data, or life-science research.
 
-We prioritize:
+I prioritize:
 
 - Official project pages, papers, or model cards with enough documentation to evaluate a resource.
 - Resources with a clear biomedical use case rather than general-purpose models with only a passing medical example.
@@ -45,22 +47,22 @@ The list is curated, not ranked. Parameter counts, dataset sizes, availability, 
 
 Language models trained or adapted for biomedical literature, clinical notes, medical dialogue, and clinical reasoning.
 
-- [BioBERT](https://github.com/dmis-lab/biobert) - 110M params. PubMed + PMC. Early biomedical BERT; widely cited.
-- [BioGPT](https://github.com/microsoft/BioGPT) - 1.5B params. PubMed + papers. Microsoft's generative model for biomedical text generation and mining.
+- [BioBERT](https://github.com/dmis-lab/biobert) - A 110M-parameter BERT model pretrained on PubMed abstracts and PMC full-text articles.
+- [BioGPT](https://github.com/microsoft/BioGPT) - A 1.5B-parameter generative model pretrained on PubMed literature for biomedical text generation and mining.
 - [BioMedLM (PubMedGPT)](https://huggingface.co/stanford-crfm/BioMedLM) - 2.7B params. Stanford CRFM; domain-specific model trained from scratch.
-- [BioMistral](https://huggingface.co/BioMistral/BioMistral-7B) - 7B params. PubMed Central. Mistral-based open biomedical LLM.
-- [ClinicalBERT](https://huggingface.co/emilyalsentzer/Bio_ClinicalBERT) - 110M params. MIMIC-III discharge summaries. BERT fine-tuned on clinical notes.
-- [ClinicalLongformer](https://huggingface.co/yikao810/ClinicalLongformer) - 4K context. Clinical notes. Long-context model for full-note processing.
-- [GatorTron](https://arxiv.org/abs/2203.03560) - 3.9B/8.9B params. 90B tokens from clinical and biomedical text. Large clinical language model from UF Health.
-- [HuatuoGPT](https://github.com/FreedomIntelligence/HuatuoGPT) - 7B/13B/33B params. Chinese medical LLM fine-tuned on physician dialogues.
+- [BioMistral](https://huggingface.co/BioMistral/BioMistral-7B) - A 7B-parameter Mistral model adapted to biomedical text from PubMed Central.
+- [ClinicalBERT](https://huggingface.co/emilyalsentzer/Bio_ClinicalBERT) - A 110M-parameter BERT model adapted to clinical notes from MIMIC-III discharge summaries.
+- [ClinicalLongformer](https://huggingface.co/yikao810/ClinicalLongformer) - A long-context clinical language model with a 4K-token context window for full-note processing.
+- [GatorTron](https://arxiv.org/abs/2203.03560) - Clinical language models from UF Health, trained on up to 90B tokens of clinical and biomedical text, with 3.9B and 8.9B parameter variants.
+- [HuatuoGPT](https://github.com/FreedomIntelligence/HuatuoGPT) - Chinese medical language models fine-tuned on physician dialogues, available in 7B, 13B, and 33B variants.
 - [HuatuoGPT-II](https://github.com/FreedomIntelligence/HuatuoGPT-II) - 7B/13B/34B params. One-stage medical adaptation for Chinese medical dialogue.
-- [Med-PaLM 2](https://arxiv.org/abs/2305.09617) - Google's medical LLM. Achieved USMLE-level performance in published evaluations; not open-weight.
+- [Med-PaLM 2](https://arxiv.org/abs/2305.09617) - Google's medical language model; it is not open-weight and was evaluated on USMLE-style tasks.
 - [MedGemma](https://github.com/google-health/medgemma) - Collection of Gemma 3 variants for medical text and image comprehension: a 4B multimodal model and a 27B text-only model.
 - [MEDITRON](https://huggingface.co/epfl-llm/meditron-7b) - 7B/70B params. Medical papers + guidelines. EPFL open-weight models for medical language tasks.
 - [MMedLM 2](https://github.com/MAGIC-AI4Med/MMedLM) - Multilingual medical LLM supporting 8 languages and trained on a multilingual medical corpus.
-- [OpenBioLLM](https://huggingface.co/aaditya/OpenBioLLM-Llama3-8B) - 8B/70B params. Llama-3 adaptations for biomedical text with published medical benchmark results.
-- [PMC-LLaMA](https://huggingface.co/axiong/PMC_LLaMA_13B) - 7B/13B params. PubMed Central. LLaMA fine-tuned on biomedical literature.
-- [PubMedBERT](https://huggingface.co/microsoft/PubMedBERT) - 110M params. PubMed abstracts, trained from scratch. Strong biomedical NLP baseline.
+- [OpenBioLLM](https://huggingface.co/aaditya/OpenBioLLM-Llama3-8B) - Llama 3 adaptations for biomedical text, available in 8B and 70B variants.
+- [PMC-LLaMA](https://huggingface.co/axiong/PMC_LLaMA_13B) - LLaMA models fine-tuned on PubMed Central articles, available in 7B and 13B variants.
+- [PubMedBERT](https://huggingface.co/microsoft/PubMedBERT) - A 110M-parameter BERT model pretrained from scratch on PubMed abstracts.
 
 ## Vision-Language Models
 
@@ -128,7 +130,7 @@ Protein sequence, structure, and design models. This section includes important 
 ### Relation Extraction & Drug Interactions
 
 - [ADE Corpus](https://huggingface.co/datasets/ade_corpus_v2) - Adverse drug events. 3,000+ sentences.
-- [ChemProt](https://github.com/arwhirang/recursive_chemprot) - Chemical–protein relation extraction. 1,820 abstracts.
+- [ChemProt](https://github.com/ncbi-nlp/BLUE_Benchmark) - Chemical–protein relation extraction benchmark from BioCreative VI, with 1,820 PubMed abstracts.
 - [DDI Corpus](https://github.com/yardstick17/DDIExtraction) - Drug–drug interaction extraction. 792 documents.
 - [EU-ADR](https://github.com/mi-erasmusmc/EU-ADR-Corpus) - Drug–adverse-effect relations. 3,000 sentences.
 - [GAD (Genetic Association Database)](https://academic.oup.com/bioinformatics/article/25/18/2486/194116) - Gene–disease association extraction. 5,330+ sentences.
@@ -149,7 +151,7 @@ Protein sequence, structure, and design models. This section includes important 
 
 ## Shared Tasks & Challenges
 
-- [BioASQ Challenge](https://github.com/dmis-lab/bioasq-biobert) - Biomedical QA and retrieval. 2013–present.
+- [BioASQ Challenge](https://bioasq.org/participate/challenges) - Biomedical question answering and retrieval challenge.
 - [BioNLP Shared Task](https://aclanthology.org/venues/bionlp/) - Event extraction from biomedical text. 2009–2026.
 - [MedReason Challenge 2026](https://medreason26.github.io/) - Medical multimodal reasoning. MICCAI challenge evaluating visual question answering under low-dose X-ray, 7T MRI, and other domain shifts.
 - [MEDIQA](https://github.com/abachaa/MEDIQA2019) - Medical text generation and summarization. 2019.
