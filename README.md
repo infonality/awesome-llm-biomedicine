@@ -57,13 +57,13 @@ Language models trained or adapted for biomedical literature, clinical notes, me
 - [HuatuoGPT](https://github.com/FreedomIntelligence/HuatuoGPT) - Chinese medical language models fine-tuned on physician dialogues, available in 7B, 13B, and 33B variants.
 - [HuatuoGPT-II](https://github.com/FreedomIntelligence/HuatuoGPT-II) - 7B/13B/34B params. One-stage medical adaptation for Chinese medical dialogue.
 - [Med-PaLM 2](https://arxiv.org/abs/2305.09617) - Google's medical language model; it is not open-weight and was evaluated on USMLE-style tasks.
-- [MedGemma](https://github.com/google-health/medgemma) - Collection of Gemma 3 variants for medical text and image comprehension: a 4B multimodal model and a 27B text-only model.
+- [MedGemma](https://github.com/google-health/medgemma) - Collection of Gemma 3 variants for medical text and image comprehension, including 4B multimodal and 27B text-only models.
 - [Med42](https://huggingface.co/m42-health/med42-70b) - A 70B-parameter open-access clinical LLM from M42 for medical question answering.
 - [MediPhi](https://huggingface.co/collections/microsoft/mediphi) - Collection of 3.8B-parameter Phi-3.5-based models adapted to medical and clinical NLP tasks.
 - [MEDITRON](https://huggingface.co/epfl-llm/meditron-7b) - 7B/70B params. Medical papers + guidelines. EPFL open-weight models for medical language tasks.
 - [MMedLM 2](https://github.com/MAGIC-AI4Med/MMedLM) - Multilingual medical LLM supporting 8 languages and trained on a multilingual medical corpus.
 - [HuatuoGPT-o1](https://github.com/FreedomIntelligence/HuatuoGPT-o1) - 7B, 8B, and 70B medical reasoning models trained with verifier-guided reinforcement learning on verifiable medical problems.
-- [OpenBioLLM](https://huggingface.co/aaditya/OpenBioLLM-Llama3-8B) - Llama 3 adaptations for biomedical text, available in 8B and 70B variants.
+- [OpenBioLLM](https://huggingface.co/aaditya/Llama3-OpenBioLLM-8B) - Llama 3 adaptations for biomedical text, available in 8B and 70B variants.
 - [PMC-LLaMA](https://huggingface.co/axiong/PMC_LLaMA_13B) - LLaMA models fine-tuned on PubMed Central articles, available in 7B and 13B variants.
 - [PubMedBERT (BiomedBERT)](https://huggingface.co/microsoft/BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext) - A 110M-parameter BERT model pretrained from scratch on PubMed abstracts and PMC full-text articles.
 
@@ -76,6 +76,7 @@ Multimodal models for biomedical imaging, radiology, pathology, and medical visu
 - [BiomedParse](https://github.com/microsoft/BiomedParse) - Biomedical foundation model for joint segmentation, detection, and recognition across nine imaging modalities.
 - [HuatuoGPT-Vision](https://github.com/FreedomIntelligence/HuatuoGPT-Vision) - Medical multimodal LLM that injects visual knowledge at scale; 7B/34B models.
 - [LLaVA-Med](https://github.com/microsoft/LLaVA-Med) - Biomedical vision-language assistant trained on PMC-15M with curriculum learning for medical VQA.
+- [MedGemma 1.5](https://research.google/blog/next-generation-medical-image-interpretation-with-medgemma-15-and-medical-speech-to-text-with-medasr) - 4B multimodal model with expanded support for CT/MRI volumes, whole-slide histopathology, anatomical localization, longitudinal chest X-rays, and medical documents.
 - [MedSAM](https://github.com/bowang-lab/MedSAM) - Segment-anything model for universal medical image segmentation, trained on 1.5M image-mask pairs across 10 modalities.
 - [MedSigLIP](https://developers.google.com/health-ai-developer-foundations/medsiglip) - Medical image-text encoder built on SigLIP for biomedical image classification and retrieval; Health AI Developer Foundations terms apply.
 
@@ -87,7 +88,7 @@ Foundation models for single-cell RNA sequencing, DNA sequences, and genomics.
 - [Caduceus](https://github.com/kuleshov-group/caduceus) - DNA sequences. Reversible and bidirectional DNA sequence modeling.
 - [DNABERT-2](https://github.com/MAGICS-LAB/DNABERT_2) - 117M params. DNA sequences. Improved genome-understanding model.
 - [Evo 2](https://github.com/arcinstitute/evo2) - 1B–40B params. DNA sequences. Long-context language model for genome modeling and design at single-nucleotide resolution up to 1M base pairs.
-- [Geneformer](https://huggingface.co/ctheodoris/geneformer) - 95M params. scRNA-seq. Foundation model pretrained on 30M cells for network-biology tasks.
+- [Geneformer](https://huggingface.co/ctheodoris/Geneformer) - 95M params. scRNA-seq. Foundation model pretrained on 30M cells for network-biology tasks.
 - [HyenaDNA](https://github.com/HazyResearch/hyena-dna) - 1K–1M context. DNA sequences. Ultra-long-context genomic model.
 - [Nucleotide Transformer](https://huggingface.co/InstaDeepAI/nucleotide-transformer-2.5b-multi-species) - 500M–2.5B params. DNA sequences. Multi-species DNA foundation model.
 - [scGPT](https://github.com/bowang-lab/scGPT) - ~50M params. scRNA-seq. Single-cell foundation model for cell-type annotation and perturbation prediction.
@@ -105,7 +106,7 @@ Models for molecular property prediction, biomolecular interactions, drug–drug
 - [MolT5](https://github.com/blender-nlp/MolT5) - Molecule to text. T5 model for molecule captioning and generation.
 - [MolReGPT](https://arxiv.org/abs/2310.17341) - LLM-based molecular generation through prompt engineering with SMILES.
 - [TxGemma](https://developers.google.com/health-ai-developer-foundations/txgemma/model-card) - 2B, 9B, and 27B language models fine-tuned for therapeutic tasks across small molecules, proteins, nucleic acids, diseases, and cell lines; Health AI Developer Foundations terms apply.
-- [Uni-Mol](https://github.com/dptech-corp/Uni-Mol) - 3D molecular representation model for drug-discovery tasks.
+- [Uni-Mol](https://github.com/deepmodeling/Uni-Mol) - 3D molecular representation model for drug-discovery tasks.
 
 ## Protein & Structural Biology Models
 
@@ -124,6 +125,7 @@ Protein sequence, structure, and design models. This section includes important 
 
 ### Clinical Text
 
+- [AfriMed-QA](https://github.com/afrimedqa/AfriMed-QA) - Pan-African, multispecialty benchmark for evaluating LLMs on African healthcare questions.
 - [AMEGA-LLM](https://github.com/DATEXIS/AMEGA-benchmark) - Guideline adherence. Open-ended clinical benchmark across 24 diagnostic scenarios in 13 specialties with physician-designed rubrics.
 - [BioASQ](https://bioasq.org/) - Biomedical question answering and retrieval benchmark; includes expert-annotated questions.
 - [BlueBERT benchmark suite](https://github.com/ncbi-nlp/BlueBERT) - Multiple tasks. NCBI benchmark suite for biomedical language understanding.
@@ -156,9 +158,12 @@ Protein sequence, structure, and design models. This section includes important 
 
 - [AgentClinic](https://agentclinic.github.io/) - Medical agents. Multimodal agent benchmark that simulates clinical environments with patient, doctor, and measurement agents.
 - [ASCENT](https://proceedings.mlr.press/v333/choi26a.html) - Diagnostic reasoning. Clinician-annotated benchmark of 3,078 stepwise problems derived from MedQA-USMLE.
+- [BioKGBench](https://github.com/westlake-autolab/BioKGBench) - Biomedical science agents. Benchmark for scientific claim verification, biomedical knowledge-graph QA, and knowledge-graph error checking.
+- [ChestAgentBench](https://huggingface.co/datasets/wanglab/chest-agent-bench) - Radiology agents. Benchmark of 2,500 complex chest X-ray queries across seven categories.
 - [DrugDiscoveryBench](https://github.com/scaleapi/DrugDiscoveryBench) - Drug-discovery agents. Open task and image data for computational drug-discovery workflows; reference rubrics require gated Hugging Face access.
 - [FHIR-AgentBench](https://github.com/glee4810/FHIR-AgentBench) - EHR agents. 2,931 clinical questions grounded in HL7 FHIR with released data and evaluation code; MIMIC-IV FHIR data and cloud setup are required.
 - [MedAgentBench](https://stanfordmlgroup.github.io/projects/medagentbench) - Agent evaluation. 300 physician-written tasks across 10 categories in a FHIR-compliant EHR environment.
+- [MedAgentBoard](https://github.com/yhzhu99/MedAgentBoard) - Multi-agent evaluation. Benchmark spanning medical VQA, lay-summary generation, structured EHR prediction, and clinical workflow automation.
 - [RadLE 2.0](https://crashlab.in/radle-technicalreport) - Radiology agents. Uncertainty-aware benchmark for single-image diagnosis that scores confidence, safety, accuracy, and handover readiness.
 
 ## Shared Tasks & Challenges
@@ -175,6 +180,9 @@ Protein sequence, structure, and design models. This section includes important 
 LLM-based agents and systems for clinical reasoning, therapeutic decision-making, and medical research.
 
 - [Biomni](https://github.com/snap-stanford/Biomni) - Biomedical research agent combining LLM planning, retrieval-augmented execution, and code tools across life-science tasks; sandbox generated code and review integrated-tool licenses.
+- [LEADS](https://github.com/Keiji-AI/LEADS) - Foundation model for medical literature search, study screening, and structured data extraction in systematic reviews.
+- [MedAgentGym](https://github.com/wshi83/MedAgentGym) - Training environment for code-centric biomedical reasoning agents, with executable tasks and verifiable feedback.
+- [MedRAX](https://github.com/bowang-lab/MedRAX) - Medical reasoning agent for chest X-rays that orchestrates multimodal models and specialized imaging tools.
 - [TxAgent](https://github.com/mims-harvard/TxAgent) - Agent for therapeutic reasoning with access to a large biomedical tool universe; Harvard.
 
 ## Tools & Libraries
@@ -182,6 +190,7 @@ LLM-based agents and systems for clinical reasoning, therapeutic decision-making
 - [BERN2](https://github.com/dmis-lab/bern) - Biomedical NER. Multi-type entity recognition for diseases, drugs, genes, and other entities.
 - [BigBio](https://github.com/bigscience-workshop/biomedical) - Dataset loading. Unified access to 160+ biomedical datasets.
 - [BioC](https://pypi.org/project/bioc/) - Biomedical text format. XML/JSON interchange format for biomedical text.
+- [BioMCP](https://github.com/genomoncology/biomcp) - Biomedical MCP server and CLI for evidence-oriented search across literature, clinical trials, genomic variants, and other trusted sources.
 - [cTAKES](https://ctakes.apache.org/) - Clinical NLP. Clinical Text Analysis Knowledge Extraction System.
 - [MedSpaCy](https://github.com/medspacy/medspacy) - Clinical NLP pipeline with section detection and rule-based processing.
 - [MedCAT](https://github.com/CogStack/MedCAT) - Clinical NLP pipeline for medical concept annotation and linking to SNOMED CT and UMLS.
@@ -197,7 +206,8 @@ LLM-based agents and systems for clinical reasoning, therapeutic decision-making
 - HuatuoGPT: Zhang et al. (2023). HuatuoGPT, towards Taming Language Model to Be a Doctor. [arXiv:2305.15075](https://arxiv.org/abs/2305.15075)
 - HuatuoGPT-o1: Chen et al. (2024). HuatuoGPT-o1, Towards Medical Complex Reasoning with LLMs. [arXiv:2412.18925](https://arxiv.org/abs/2412.18925)
 - Med-PaLM: Singhal et al. (2023). Large language models encode clinical knowledge. [arXiv:2212.13138](https://arxiv.org/abs/2212.13138)
-- MedGemma: Golden et al. (2025). MedGemma: Open Weight Medical LLMs. [arXiv:2507.05201](https://arxiv.org/abs/2507.05201)
+- MedGemma: Sellergren et al. (2025). MedGemma Technical Report. [arXiv:2507.05201](https://arxiv.org/abs/2507.05201)
+- MedGemma 1.5: Sellergren et al. (2026). MedGemma 1.5 Technical Report. [arXiv:2604.05081](https://arxiv.org/abs/2604.05081)
 - MediPhi: Corbeil et al. (2025). A Modular Approach for Clinical SLMs Driven by Synthetic Data with Pre-Instruction Tuning, Model Merging, and Clinical-Tasks Alignment. [ACL 2025](https://aclanthology.org/2025.acl-long.950/)
 - MEDITRON: Chen et al. (2023). MEDITRON-70B: Scaling Medical Pretraining of Language Models. [arXiv:2311.18279](https://arxiv.org/abs/2311.18279)
 - MMedLM: Qiu et al. (2024). Towards Building Multilingual Language Model for Medicine. [Nature Communications](https://www.nature.com/articles/s41467-024-52417-z)
@@ -235,6 +245,7 @@ LLM-based agents and systems for clinical reasoning, therapeutic decision-making
 
 ### Evaluation & Safety
 
+- AfriMed-QA: Olatunji et al. (2025). AfriMed-QA: Benchmarking large language models for global health. [ACL 2025](https://aclanthology.org/2025.acl-long.96/)
 - Clinical safety evaluation: Omiye et al. (2023). Large language models propagate race-based medicine. [npj Digital Medicine](https://www.nature.com/articles/s41746-023-00939-z)
 - AMEGA-LLM: Fast et al. (2024). Autonomous Medical Evaluation for Guideline Adherence of Large Language Models. [npj Digital Medicine](https://www.nature.com/articles/s41746-024-01356-6)
 - BRIDGE: Wu et al. (2026). BRIDGE: Benchmarking Large Language Models for Understanding Real-world Clinical Practice Text. [arXiv:2504.19467](https://arxiv.org/abs/2504.19467)
@@ -246,8 +257,14 @@ LLM-based agents and systems for clinical reasoning, therapeutic decision-making
 ### LLM Agents
 
 - ASCENT: Choi et al. (2026). ASCENT: A Benchmark for Evaluating and Advancing Stepwise Diagnostic Reasoning in Large Language Models on Common Clinical Scenarios. [Open PDF](https://raw.githubusercontent.com/mlresearch/v333/main/assets/choi26a/choi26a.pdf)
-- FHIR-AgentBench: Lee et al. (2025). FHIR-AgentBench: Benchmarking LLM Agents for Realistic Interoperable EHR Question Answering. [arXiv:2509.19319](https://arxiv.org/abs/2509.19319)
 - AgentClinic: Schmidgall et al. (2024). AgentClinic: a multimodal agent benchmark to evaluate AI in simulated clinical environments. [arXiv:2405.07960](https://arxiv.org/abs/2405.07960)
+- BioKGBench: Lin et al. (2024). BioKGBench: A Knowledge Graph Checking Benchmark of AI Agent for Biomedical Science. [arXiv:2407.00466](https://arxiv.org/abs/2407.00466)
+- FHIR-AgentBench: Lee et al. (2025). FHIR-AgentBench: Benchmarking LLM Agents for Realistic Interoperable EHR Question Answering. [arXiv:2509.19319](https://arxiv.org/abs/2509.19319)
+- LEADS: Wang et al. (2025). A foundation model for human-AI collaboration in medical literature mining. [Nature Communications](https://www.nature.com/articles/s41467-025-62058-5)
+- MedAgentBoard: Zhu et al. (2025). MedAgentBoard: Benchmarking Multi-Agent Collaboration with Conventional Methods for Diverse Medical Tasks. [arXiv:2505.12371](https://arxiv.org/abs/2505.12371)
+- MedAgentGym: Xu et al. (2026). MedAgentGym: A Scalable Agentic Training Environment for Code-Centric Reasoning in Biomedical Data Science. [arXiv:2506.04405](https://arxiv.org/abs/2506.04405)
+- MedRAX: Fallahpour et al. (2025). MedRAX: Medical Reasoning Agent for Chest X-ray. [arXiv:2502.02673](https://arxiv.org/abs/2502.02673)
+- STELLA: Jin et al. (2025). STELLA: Self-Evolving LLM Agent for Biomedical Research. [arXiv:2507.02004](https://arxiv.org/abs/2507.02004)
 - TxAgent: Gao et al. (2025). TxAgent: An AI Agent for Therapeutic Reasoning Across a Universe of Tools. [arXiv:2503.10970](https://arxiv.org/abs/2503.10970)
 
 ## Ontologies & Knowledge Bases
@@ -269,7 +286,7 @@ Essential resources for biomedical NLP, retrieval, and clinical data work. Acces
 ## Courses & Tutorials
 
 - [AMIA Informatics Summit tutorials](https://amia.org/) - Clinical NLP and AI in healthcare.
-- [BioNLP workshop tutorials (ACL)](https://aclanthology.org/2023.bionlp-1/) - Biomedical NLP methods.
+- [BioNLP workshop tutorials (ACL)](https://aclanthology.org/volumes/2023.bionlp-1/) - Biomedical NLP methods.
 - [DeepLearning.AI Drug Discovery](https://www.deeplearning.ai/) - AI for drug discovery.
 - [Stanford BMDS 215](https://bulletin.stanford.edu/courses/2122201) - Data science for medicine.
 - [Stanford CS25 Transformers](https://web.stanford.edu/class/cs25/) - LLM foundations.
