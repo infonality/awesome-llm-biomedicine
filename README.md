@@ -57,7 +57,7 @@ Language models trained or adapted for biomedical literature, clinical notes, me
 - [HuatuoGPT](https://github.com/FreedomIntelligence/HuatuoGPT) - Chinese medical language models fine-tuned on physician dialogues, available in 7B, 13B, and 33B variants.
 - [HuatuoGPT-II](https://github.com/FreedomIntelligence/HuatuoGPT-II) - 7B/13B/34B params. One-stage medical adaptation for Chinese medical dialogue.
 - [Med-PaLM 2](https://arxiv.org/abs/2305.09617) - Google's medical language model; it is not open-weight and was evaluated on USMLE-style tasks.
-- [MedGemma](https://github.com/google-health/medgemma) - Collection of Gemma 3 variants for medical text and image comprehension, including 4B multimodal and 27B text-only models.
+- [MedGemma](https://github.com/google-health/medgemma) - Collection of Gemma 3 variants for medical text and image comprehension: MedGemma 1.5 4B multimodal, plus MedGemma 1 4B multimodal and 27B text-only and multimodal models.
 - [Med42](https://huggingface.co/m42-health/med42-70b) - A 70B-parameter open-access clinical LLM from M42 for medical question answering.
 - [MediPhi](https://huggingface.co/collections/microsoft/mediphi) - Collection of 3.8B-parameter Phi-3.5-based models adapted to medical and clinical NLP tasks.
 - [MEDITRON](https://huggingface.co/epfl-llm/meditron-7b) - 7B/70B params. Medical papers + guidelines. EPFL open-weight models for medical language tasks.
@@ -105,6 +105,7 @@ Models for molecular property prediction, biomolecular interactions, drug–drug
 - [Chemformer](https://github.com/MolecularAI/Chemformer) - SMILES to reactions. Transformer for retrosynthesis.
 - [MolT5](https://github.com/blender-nlp/MolT5) - Molecule to text. T5 model for molecule captioning and generation.
 - [MolReGPT](https://arxiv.org/abs/2310.17341) - LLM-based molecular generation through prompt engineering with SMILES.
+- [MAMMAL](https://github.com/BiomedSciAI/biomed-multi-alignment) - 458M biomedical foundation model trained on more than 2 billion biological samples across proteins, small molecules, and single-cell gene expression data.
 - [TxGemma](https://developers.google.com/health-ai-developer-foundations/txgemma/model-card) - 2B, 9B, and 27B language models fine-tuned for therapeutic tasks across small molecules, proteins, nucleic acids, diseases, and cell lines; Health AI Developer Foundations terms apply.
 - [Uni-Mol](https://github.com/deepmodeling/Uni-Mol) - 3D molecular representation model for drug-discovery tasks.
 
@@ -159,6 +160,8 @@ Protein sequence, structure, and design models. This section includes important 
 - [AgentClinic](https://agentclinic.github.io/) - Medical agents. Multimodal agent benchmark that simulates clinical environments with patient, doctor, and measurement agents.
 - [ASCENT](https://proceedings.mlr.press/v333/choi26a.html) - Diagnostic reasoning. Clinician-annotated benchmark of 3,078 stepwise problems derived from MedQA-USMLE.
 - [BioKGBench](https://github.com/westlake-autolab/BioKGBench) - Biomedical science agents. Benchmark for scientific claim verification, biomedical knowledge-graph QA, and knowledge-graph error checking.
+- [Biomni-Eval1](https://huggingface.co/datasets/biomni/Eval1) - Biomedical reasoning. 433 instances spanning 10 biological research tasks, released with the Biomni agent.
+- [BiomniBench](https://huggingface.co/datasets/phylobio/BiomniBench-DA) - Biomedical research agents. Process-level benchmark that scores complete multi-step data-analysis trajectories against expert rubrics.
 - [ChestAgentBench](https://huggingface.co/datasets/wanglab/chest-agent-bench) - Radiology agents. Benchmark of 2,500 complex chest X-ray queries across seven categories.
 - [DrugDiscoveryBench](https://github.com/scaleapi/DrugDiscoveryBench) - Drug-discovery agents. Open task and image data for computational drug-discovery workflows; reference rubrics require gated Hugging Face access.
 - [FHIR-AgentBench](https://github.com/glee4810/FHIR-AgentBench) - EHR agents. 2,931 clinical questions grounded in HL7 FHIR with released data and evaluation code; MIMIC-IV FHIR data and cloud setup are required.
@@ -180,9 +183,11 @@ Protein sequence, structure, and design models. This section includes important 
 LLM-based agents and systems for clinical reasoning, therapeutic decision-making, and medical research.
 
 - [Biomni](https://github.com/snap-stanford/Biomni) - Biomedical research agent combining LLM planning, retrieval-augmented execution, and code tools across life-science tasks; sandbox generated code and review integrated-tool licenses.
+- [LabOS](https://github.com/zaixizhang/LabOS) - AI-XR co-scientist framework for biomedical research combining self-evolving agents, multimodal perception, and experimental tool orchestration.
 - [LEADS](https://github.com/Keiji-AI/LEADS) - Foundation model for medical literature search, study screening, and structured data extraction in systematic reviews.
 - [MedAgentGym](https://github.com/wshi83/MedAgentGym) - Training environment for code-centric biomedical reasoning agents, with executable tasks and verifiable feedback.
 - [MedRAX](https://github.com/bowang-lab/MedRAX) - Medical reasoning agent for chest X-rays that orchestrates multimodal models and specialized imaging tools.
+- [STELLA](https://github.com/zaixizhang/STELLA) - Self-evolving biomedical research agent with multimodal planning, tool creation, and iterative skill improvement.
 - [TxAgent](https://github.com/mims-harvard/TxAgent) - Agent for therapeutic reasoning with access to a large biomedical tool universe; Harvard.
 
 ## Tools & Libraries
@@ -240,6 +245,7 @@ LLM-based agents and systems for clinical reasoning, therapeutic decision-making
 
 - Boltz-2: Passaro et al. (2025). Boltz-2: Towards Accurate and Efficient Binding Affinity Prediction. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC12262699/)
 - ChemBERTa: Chithrananda et al. (2020). ChemBERTa: Large-Scale Self-Supervised Pretraining for Molecular Property Prediction. [arXiv:2010.09885](https://arxiv.org/abs/2010.09885)
+- MAMMAL: Shoshan et al. (2024). MAMMAL: Molecular Aligned Multi-Modal Architecture and Language. [arXiv:2410.22367](https://arxiv.org/abs/2410.22367)
 - MolT5: Edwards et al. (2022). Translation between Molecules and Natural Language. [arXiv:2204.11817](https://arxiv.org/abs/2204.11817)
 - TxGemma: Wang et al. (2025). TxGemma: Efficient and Agentic LLMs for Therapeutics. [arXiv:2504.06196](https://arxiv.org/abs/2504.06196)
 
@@ -259,7 +265,9 @@ LLM-based agents and systems for clinical reasoning, therapeutic decision-making
 - ASCENT: Choi et al. (2026). ASCENT: A Benchmark for Evaluating and Advancing Stepwise Diagnostic Reasoning in Large Language Models on Common Clinical Scenarios. [Open PDF](https://raw.githubusercontent.com/mlresearch/v333/main/assets/choi26a/choi26a.pdf)
 - AgentClinic: Schmidgall et al. (2024). AgentClinic: a multimodal agent benchmark to evaluate AI in simulated clinical environments. [arXiv:2405.07960](https://arxiv.org/abs/2405.07960)
 - BioKGBench: Lin et al. (2024). BioKGBench: A Knowledge Graph Checking Benchmark of AI Agent for Biomedical Science. [arXiv:2407.00466](https://arxiv.org/abs/2407.00466)
+- BiomniBench: Qu et al. (2026). BiomniBench: Process-level Evaluation of LLM Agents for Real-world Biomedical Research. [bioRxiv](https://www.biorxiv.org/content/10.64898/2026.05.12.724604v2)
 - FHIR-AgentBench: Lee et al. (2025). FHIR-AgentBench: Benchmarking LLM Agents for Realistic Interoperable EHR Question Answering. [arXiv:2509.19319](https://arxiv.org/abs/2509.19319)
+- LabOS: Cong et al. (2025). LabOS: The AI-XR Co-Scientist That Sees and Works With Humans. [arXiv:2510.14861](https://arxiv.org/abs/2510.14861)
 - LEADS: Wang et al. (2025). A foundation model for human-AI collaboration in medical literature mining. [Nature Communications](https://www.nature.com/articles/s41467-025-62058-5)
 - MedAgentBoard: Zhu et al. (2025). MedAgentBoard: Benchmarking Multi-Agent Collaboration with Conventional Methods for Diverse Medical Tasks. [arXiv:2505.12371](https://arxiv.org/abs/2505.12371)
 - MedAgentGym: Xu et al. (2026). MedAgentGym: A Scalable Agentic Training Environment for Code-Centric Reasoning in Biomedical Data Science. [arXiv:2506.04405](https://arxiv.org/abs/2506.04405)
