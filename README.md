@@ -200,6 +200,7 @@ LLM-based agents and systems for clinical reasoning, therapeutic decision-making
 - [MedSpaCy](https://github.com/medspacy/medspacy) - Clinical NLP pipeline with section detection and rule-based processing.
 - [MedCAT](https://github.com/CogStack/MedCAT) - Clinical NLP pipeline for medical concept annotation and linking to SNOMED CT and UMLS.
 - [scispaCy](https://github.com/allenai/scispacy) - Biomedical NLP pipeline with models for NER and entity linking.
+- [Biomedical NLP Skills](https://github.com/infonality/biomedical-nlp-skills) - Installable agent skills companion for clinical NER, de-identification, relation extraction, entity linking, biomedical QA, literature triage, and shared task replication. Install with `npx skills add infonality/biomedical-nlp-skills`.
 
 ## Key Papers
 
