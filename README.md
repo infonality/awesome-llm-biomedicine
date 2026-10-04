@@ -72,6 +72,7 @@ Multimodal models for biomedical imaging, radiology, pathology, and medical visu
 - [BiomedCLIP](https://huggingface.co/microsoft/BiomedCLIP-PubMedBERT_256-vit_base_patch16_224) - Biomedical vision-language foundation model pretrained on PMC-15M image-text pairs.
 - [BiomedGPT](https://github.com/taokz/BiomedGPT) - Generalist vision-language foundation model for diverse biomedical tasks. Nature Medicine 2024.
 - [BiomedParse](https://github.com/microsoft/BiomedParse) - Biomedical foundation model for joint segmentation, detection, and recognition across nine imaging modalities.
+- [CLEAR](https://www.nature.com/articles/s41551-026-01741-4) - Auditable radiology foundation model that grounds chest-X-ray representations in clinical concepts; Nature Biomedical Engineering 2026.
 - [HuatuoGPT-Vision](https://github.com/FreedomIntelligence/HuatuoGPT-Vision) - Medical multimodal LLM that injects visual knowledge at scale; 7B/34B models.
 - [LLaVA-Med](https://github.com/microsoft/LLaVA-Med) - Biomedical vision-language assistant trained on PMC-15M with curriculum learning for medical VQA.
 
@@ -79,7 +80,8 @@ Multimodal models for biomedical imaging, radiology, pathology, and medical visu
 
 Foundation models for single-cell RNA sequencing, DNA sequences, and genomics.
 
-- [AlphaGenome](https://github.com/google-deepmind/alphagenome_research) - 1 Mb context. DNA sequence-to-function model for regulatory variant effects across gene expression, splicing, chromatin, and 3D contacts; Apache-2.0 research code and weights subject to non-commercial model terms.
+- [AlphaGenome](https://github.com/google-deepmind/alphagenome_research) - 1 Mb context. DNA sequence-to-function model for regulatory variant effects across gene expression, splicing, chromatin, and 3D contacts; Apache-2.0 research code with separate model and data terms for weights and materials.
+- [Cell2Sentence-Scale (C2S-Scale)](https://github.com/vandijklab/cell2sentence) - Single-cell RNA-seq. Gemma-based LLM family from 410M to 27B parameters that represents gene-expression profiles as cell sentences for biological reasoning.
 - [Caduceus](https://github.com/kuleshov-group/caduceus) - DNA sequences. Reversible and bidirectional DNA sequence modeling.
 - [DNABERT-2](https://github.com/MAGICS-LAB/DNABERT_2) - 117M params. DNA sequences. Improved genome-understanding model.
 - [Evo 2](https://github.com/arcinstitute/evo2) - 1B–40B params. DNA sequences. Long-context language model for genome modeling and design at single-nucleotide resolution up to 1M base pairs.
@@ -110,6 +112,8 @@ Protein sequence, structure, and design models. This section includes important 
 - [ESM3](https://www.evolutionaryscale.ai/blog/esm3-release) - Protein language model from EvolutionaryScale for generative protein design.
 - [LucaOne](https://github.com/LucaOne/LucaOne) - Unified nucleic-acid and protein foundation model with code and checkpoints for sequence embeddings, classification, regression, and residue-level tasks.
 - [ProGen2](https://github.com/salesforce/progen/tree/main/progen2) - 151M–6.4B params. Protein sequences. Generative protein-design models.
+- [ProLLaMA](https://github.com/PKU-YuanGroup/ProLLaMA) - Multitask protein language model for protein understanding and generation, with an evolutionary framework for controllable design.
+- [Proteina-Complexa](https://github.com/NVIDIA-BioNeMo/Proteina-Complexa) - Atomistic generative model for protein and small-molecule binder design combining flow-based pretraining with inference-time optimization; ICLR 2026 oral.
 - [ProtTrans](https://huggingface.co/Rostlab/prot_bert_bfd) - 420M–3B params. Protein sequences. Transformer models for protein representation learning.
 - [RoseTTAFold](https://github.com/RosettaCommons/RoseTTAFold) - Protein structure. 3D protein-structure prediction; non-LLM but essential context.
 - [SaProt](https://github.com/westlake-repl/SaProt) - 650M params. Protein structure. Structure-aware protein model.
@@ -128,7 +132,8 @@ Protein sequence, structure, and design models. This section includes important 
 - [MedQA (USMLE)](https://github.com/jind11/MedQA) - QA. 12.7K questions. US medical licensing exam questions.
 - [MedMCQA](https://github.com/MedMCQA/MedMCQA) - QA. 194K questions. Indian medical entrance exam MCQs.
 - [MedXpertQA](https://github.com/TsinghuaC3I/MedXpertQA) - QA. 4,460 questions. Expert-level medical reasoning benchmark. ICML 2025. Text and multimodal subsets.
-- [MIMIC-III / MIMIC-IV](https://physionet.org/content/mimiciv/) - Clinical notes and structured data. Credentialed access and training are required.
+- [MIMIC-III](https://physionet.org/content/mimiciii/1.4/) - Credentialed clinical notes and structured ICU data; access and required training apply.
+- [MIMIC-IV](https://physionet.org/content/mimiciv/) - Credentialed clinical notes and structured hospital/ICU data; access and required training apply.
 - [MMLU (medical subsets)](https://github.com/hendrycks/test) - MCQ. Medical subject subsets for broad knowledge evaluation.
 - [PubMedQA](https://github.com/pubmedqa/pubmedqa) - QA. Expert-labeled and unlabeled questions over PubMed abstracts.
 
@@ -153,6 +158,10 @@ Protein sequence, structure, and design models. This section includes important 
 - [FHIR-AgentBench](https://github.com/glee4810/FHIR-AgentBench) - EHR agents. 2,931 clinical questions grounded in HL7 FHIR with released data and evaluation code; MIMIC-IV FHIR data and cloud setup are required.
 - [MedAgentBench](https://stanfordmlgroup.github.io/projects/medagentbench) - Agent evaluation. 300 physician-written tasks across 10 categories in a FHIR-compliant EHR environment.
 - [RadLE 2.0](https://crashlab.in/radle-technicalreport) - Radiology agents. Uncertainty-aware benchmark for single-image diagnosis that scores confidence, safety, accuracy, and handover readiness.
+
+### Scientific Reasoning
+
+- [BiomedSQL](https://github.com/NIH-CARD/biomedsql) - Text-to-SQL benchmark for scientific reasoning over biomedical knowledge bases; accepted at COLM 2026 with released data and evaluation code.
 
 ## Shared Tasks & Challenges
 
@@ -230,6 +239,7 @@ LLM-based agents and systems for clinical reasoning, therapeutic decision-making
 - MedFailBench: Ozkan (2026). MedFailBench: A Clinician-Built Open-Source Benchmark for Medical AI Safety Boundary Inspection. [arXiv:2607.15166](https://arxiv.org/abs/2607.15166)
 - Med-HALT: Pal et al. (2024). Med-HALT: Medical Domain Hallucination Test for Large Language Models. [arXiv:2307.15389](https://arxiv.org/abs/2307.15389)
 - MedXpertQA: Zuo et al. (2025). MedXpertQA: Benchmarking Expert-Level Medical Reasoning and Understanding. [arXiv:2501.18362](https://arxiv.org/abs/2501.18362)
+- Biomedical reference generation: Topaz et al. (2026). Biomedical Reference Generation Remains Unreliable across 26 Large Language Models. [arXiv:2609.14988](https://arxiv.org/abs/2609.14988)
 
 ### LLM Agents
 
