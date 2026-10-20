@@ -132,6 +132,7 @@ Protein sequence, structure, and design models. This section includes important 
 
 - [AfriMed-QA](https://github.com/afrimedqa/AfriMed-QA) - Pan-African, multispecialty benchmark for evaluating LLMs on African healthcare questions.
 - [AMEGA-LLM](https://github.com/DATEXIS/AMEGA-benchmark) - Guideline adherence. Open-ended clinical benchmark across 24 diagnostic scenarios in 13 specialties with physician-designed rubrics.
+- [BedsideBench](https://github.com/doximity/bedside-bench) - Clinical question-answering benchmark with 500 cases and public rubrics; 250-case public split under CC BY-NC-SA 4.0.
 - [BioASQ](https://bioasq.org/) - Biomedical question answering and retrieval benchmark; includes expert-annotated questions.
 - [BlueBERT benchmark suite](https://github.com/ncbi-nlp/BlueBERT) - Multiple tasks. NCBI benchmark suite for biomedical language understanding.
 - [BRIDGE](https://github.com/YLab-Open/BRIDGE) - Clinical text. Multilingual benchmark with 87 real-world tasks across nine languages and a continuously updated leaderboard.
@@ -140,11 +141,13 @@ Protein sequence, structure, and design models. This section includes important 
 - [MedNLI](https://github.com/jgc128/mednli) - Natural language inference in clinical text. Clinical-premise/hypothesis benchmark.
 - [MedQA (USMLE)](https://github.com/jind11/MedQA) - QA. 12.7K questions. US medical licensing exam questions.
 - [MedMCQA](https://github.com/MedMCQA/MedMCQA) - QA. 194K questions. Indian medical entrance exam MCQs.
+- [MHB](https://ojs.aaai.org/index.php/AAAI/article/view/41243) - Medical hallucination benchmark with 4,695 samples and 20,288 rubrics across dialogues and case reports, validated by 60 licensed physicians.
 - [MedXpertQA](https://github.com/TsinghuaC3I/MedXpertQA) - QA. 4,460 questions. Expert-level medical reasoning benchmark. ICML 2025. Text and multimodal subsets.
 - [MIMIC-III](https://physionet.org/content/mimiciii/1.4/) - Credentialed clinical notes and structured ICU data; access and required training apply.
 - [MIMIC-IV](https://physionet.org/content/mimiciv/) - Credentialed clinical notes and structured hospital/ICU data; access and required training apply.
 - [MMLU (medical subsets)](https://github.com/hendrycks/test) - MCQ. Medical subject subsets for broad knowledge evaluation.
 - [PubMedQA](https://github.com/pubmedqa/pubmedqa) - QA. Expert-labeled and unlabeled questions over PubMed abstracts.
+- [Sense and Sensitivity](https://github.com/abinithago/Sen2Med) - Clinical-triage benchmark of 6,000+ scenarios and 7,000+ physician annotations testing recommendation stability under gender and tone changes.
 
 ### Relation Extraction & Drug Interactions
 
@@ -170,13 +173,16 @@ Protein sequence, structure, and design models. This section includes important 
 - [ChestAgentBench](https://huggingface.co/datasets/wanglab/chest-agent-bench) - Radiology agents. Benchmark of 2,500 complex chest X-ray queries across seven categories.
 - [DrugDiscoveryBench](https://github.com/scaleapi/DrugDiscoveryBench) - Drug-discovery agents. Open task and image data for computational drug-discovery workflows; reference rubrics require gated Hugging Face access.
 - [FHIR-AgentBench](https://github.com/glee4810/FHIR-AgentBench) - EHR agents. 2,931 clinical questions grounded in HL7 FHIR with released data and evaluation code; MIMIC-IV FHIR data and cloud setup are required.
+- [HealthAgentBench](https://github.com/microsoft/HealthAgentBench) - Terminal-based benchmark of 54 verifiable clinical and biomedical agent tasks across seven categories; some tasks require gated datasets.
 - [MedAgentBench](https://stanfordmlgroup.github.io/projects/medagentbench) - Agent evaluation. 300 physician-written tasks across 10 categories in a FHIR-compliant EHR environment.
 - [MedAgentBoard](https://github.com/yhzhu99/MedAgentBoard) - Multi-agent evaluation. Benchmark spanning medical VQA, lay-summary generation, structured EHR prediction, and clinical workflow automation.
+- [PhysicianBench](https://github.com/HealthRex/PhysicianBench) - 100 long-horizon physician tasks across 21 specialties, scored over 670 checkpoints in a FHIR EHR; EHR image hosted on Stanford Redivis.
 - [RadLE 2.0](https://crashlab.in/radle-technicalreport) - Radiology agents. Uncertainty-aware benchmark for single-image diagnosis that scores confidence, safety, accuracy, and handover readiness.
 
 ### Scientific Reasoning
 
 - [BiomedSQL](https://github.com/NIH-CARD/biomedsql) - Text-to-SQL benchmark for scientific reasoning over biomedical knowledge bases; accepted at COLM 2026 with released data and evaluation code.
+- [LifeSciBench](https://openai.com/index/introducing-life-sci-bench/) - Expert-written benchmark of 750 free-response life-science research tasks across seven workflows and seven domains; access to task materials may be restricted.
 
 ## Shared Tasks & Challenges
 
@@ -192,6 +198,7 @@ Protein sequence, structure, and design models. This section includes important 
 LLM-based agents and systems for clinical reasoning, therapeutic decision-making, and medical research.
 
 - [Biomni](https://github.com/snap-stanford/Biomni) - Biomedical research agent combining LLM planning, retrieval-augmented execution, and code tools across life-science tasks; sandbox generated code and review integrated-tool licenses.
+- [DAS Medical Red-Teaming Agents](https://github.com/JZPeterPan/DAS-Medical-Red-Teaming-Agents) - Dynamic health-LLM audit framework for robustness, privacy, bias/fairness, and hallucination; see the [Nature Health paper](https://doi.org/10.1038/s44360-026-00152-8).
 - [LabOS](https://github.com/zaixizhang/LabOS) - AI-XR co-scientist framework for biomedical research combining self-evolving agents, multimodal perception, and experimental tool orchestration.
 - [LEADS](https://github.com/Keiji-AI/LEADS) - Foundation model for medical literature search, study screening, and structured data extraction in systematic reviews.
 - [MedAgentGym](https://github.com/wshi83/MedAgentGym) - Training environment for code-centric biomedical reasoning agents, with executable tasks and verifiable feedback.
@@ -233,7 +240,7 @@ LLM-based agents and systems for clinical reasoning, therapeutic decision-making
 - BiomedCLIP: Zhang et al. (2024). Large-Scale Domain-Specific Pretraining for Biomedical Vision-Language Processing. [arXiv:2303.00915](https://arxiv.org/abs/2303.00915)
 - BiomedGPT: Zhang et al. (2024). A generalist vision-language foundation model for diverse biomedical tasks. [Nature Medicine](https://www.nature.com/articles/s41591-024-03185-2)
 - BiomedParse: Zhao et al. (2025). A foundation model for joint segmentation, detection and recognition of biomedical objects across nine modalities. [Nature Methods](https://www.nature.com/articles/s41592-024-02499-w)
-- LLaVA-Med: Li et al. (2023). LLaVA-Med: Training a Large-and-Vision Assistant for Biomedicine in One Day. [arXiv:2306.00890](https://arxiv.org/abs/2306.00890)
+- LLaVA-Med: Li et al. (2023). LLaVA-Med: Training a Large Language-and-Vision Assistant for Biomedicine in One Day. [arXiv:2306.00890](https://arxiv.org/abs/2306.00890)
 - MedSAM: Ma et al. (2024). Segment Anything in Medical Images. [arXiv:2304.12306](https://arxiv.org/abs/2304.12306)
 
 ### Genomics LLMs
@@ -262,12 +269,15 @@ LLM-based agents and systems for clinical reasoning, therapeutic decision-making
 
 - AfriMed-QA: Olatunji et al. (2025). AfriMed-QA: Benchmarking large language models for global health. [ACL 2025](https://aclanthology.org/2025.acl-long.96/)
 - Clinical safety evaluation: Omiye et al. (2023). Large language models propagate race-based medicine. [npj Digital Medicine](https://www.nature.com/articles/s41746-023-00939-z)
+- DAS red-teaming: Pan et al. (2026). Addressing benchmarking gaps in large language models for health and medicine with dynamic red-teaming. [Nature Health](https://doi.org/10.1038/s44360-026-00152-8)
 - AMEGA-LLM: Fast et al. (2024). Autonomous Medical Evaluation for Guideline Adherence of Large Language Models. [npj Digital Medicine](https://www.nature.com/articles/s41746-024-01356-6)
 - BRIDGE: Wu et al. (2026). BRIDGE: Benchmarking Large Language Models for Understanding Real-world Clinical Practice Text. [arXiv:2504.19467](https://arxiv.org/abs/2504.19467)
 - HealthBench: Arora et al. (2025). HealthBench: Evaluating Large Language Models Towards Improved Human Health. [arXiv:2505.08775](https://arxiv.org/abs/2505.08775)
 - MedFailBench: Ozkan (2026). MedFailBench: A Clinician-Built Open-Source Benchmark for Medical AI Safety Boundary Inspection. [arXiv:2607.15166](https://arxiv.org/abs/2607.15166)
 - Med-HALT: Pal et al. (2024). Med-HALT: Medical Domain Hallucination Test for Large Language Models. [arXiv:2307.15389](https://arxiv.org/abs/2307.15389)
+- MHB: Lu et al. (2026). MHB: Medical Hallucination Benchmark for Large Language Models in Complex Clinical Tasks. [AAAI 2026](https://doi.org/10.1609/aaai.v40i45.41243)
 - MedXpertQA: Zuo et al. (2025). MedXpertQA: Benchmarking Expert-Level Medical Reasoning and Understanding. [arXiv:2501.18362](https://arxiv.org/abs/2501.18362)
+- Sense and Sensitivity: Gourabathina et al. (2026). Sense and Sensitivity: Benchmarking LLM Clinical Triage Recommendations with Physician Experts. [arXiv:2609.38600](https://arxiv.org/abs/2609.38600)
 - Biomedical reference generation: Topaz et al. (2026). Biomedical Reference Generation Remains Unreliable across 26 Large Language Models. [arXiv:2609.14988](https://arxiv.org/abs/2609.14988)
 
 ### LLM Agents
