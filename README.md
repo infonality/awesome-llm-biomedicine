@@ -75,6 +75,7 @@ Multimodal models for biomedical imaging, radiology, pathology, and medical visu
 - [BiomedGPT](https://github.com/taokz/BiomedGPT) - Generalist vision-language foundation model for diverse biomedical tasks. Nature Medicine 2024.
 - [BiomedParse](https://github.com/microsoft/BiomedParse) - Biomedical foundation model for joint segmentation, detection, and recognition across nine imaging modalities.
 - [CLEAR](https://www.nature.com/articles/s41551-026-01741-4) - Auditable radiology foundation model that grounds chest-X-ray representations in clinical concepts; Nature Biomedical Engineering 2026.
+- [EVLF-FM](https://github.com/baiyang4/EVLF) - Medical vision-language model for diagnosis, visual question answering, and image grounding; code and a checkpoint trained on public datasets are available.
 - [HuatuoGPT-Vision](https://github.com/FreedomIntelligence/HuatuoGPT-Vision) - Medical multimodal LLM that injects visual knowledge at scale; 7B/34B models.
 - [LLaVA-Med](https://github.com/microsoft/LLaVA-Med) - Biomedical vision-language assistant trained on PMC-15M with curriculum learning for medical VQA.
 - [MedGemma 1.5](https://research.google/blog/next-generation-medical-image-interpretation-with-medgemma-15-and-medical-speech-to-text-with-medasr) - 4B multimodal model with expanded support for CT/MRI volumes, whole-slide histopathology, anatomical localization, longitudinal chest X-rays, and medical documents.
@@ -118,6 +119,7 @@ Protein sequence, structure, and design models. This section includes important 
 - [ESM-2](https://github.com/facebookresearch/esm) - 650M–15B params. Protein sequences. Meta's protein language model family.
 - [ESM3](https://www.evolutionaryscale.ai/blog/esm3-release) - Protein language model from EvolutionaryScale for generative protein design.
 - [LucaOne](https://github.com/LucaOne/LucaOne) - Unified nucleic-acid and protein foundation model with code and checkpoints for sequence embeddings, classification, regression, and residue-level tasks.
+- [Pinal](https://github.com/westlake-repl/Denovo-Pinal) - Text-guided protein design model with released inference code and weights; the full pretraining corpus and training pipeline are not public.
 - [ProGen2](https://github.com/salesforce/progen/tree/main/progen2) - 151M–6.4B params. Protein sequences. Generative protein-design models.
 - [ProLLaMA](https://github.com/PKU-YuanGroup/ProLLaMA) - Multitask protein language model for protein understanding and generation, with an evolutionary framework for controllable design.
 - [Proteina-Complexa](https://github.com/NVIDIA-BioNeMo/Proteina-Complexa) - Atomistic generative model for protein and small-molecule binder design combining flow-based pretraining with inference-time optimization; ICLR 2026 oral.
@@ -174,6 +176,7 @@ Protein sequence, structure, and design models. This section includes important 
 - [DrugDiscoveryBench](https://github.com/scaleapi/DrugDiscoveryBench) - Drug-discovery agents. Open task and image data for computational drug-discovery workflows; reference rubrics require gated Hugging Face access.
 - [FHIR-AgentBench](https://github.com/glee4810/FHIR-AgentBench) - EHR agents. 2,931 clinical questions grounded in HL7 FHIR with released data and evaluation code; MIMIC-IV FHIR data and cloud setup are required.
 - [HealthAgentBench](https://github.com/microsoft/HealthAgentBench) - Terminal-based benchmark of 54 verifiable clinical and biomedical agent tasks across seven categories; some tasks require gated datasets.
+- [KlinikeBench](https://zehui127.github.io/klinikebench/) - 333 clinician-authored simulated encounters scoring history-taking, tool use, and diagnosis; released tasks require an LLM endpoint for patient simulation and judging.
 - [MedAgentBench](https://stanfordmlgroup.github.io/projects/medagentbench) - Agent evaluation. 300 physician-written tasks across 10 categories in a FHIR-compliant EHR environment.
 - [MedAgentBoard](https://github.com/yhzhu99/MedAgentBoard) - Multi-agent evaluation. Benchmark spanning medical VQA, lay-summary generation, structured EHR prediction, and clinical workflow automation.
 - [PhysicianBench](https://github.com/HealthRex/PhysicianBench) - 100 long-horizon physician tasks across 21 specialties, scored over 670 checkpoints in a FHIR EHR; EHR image hosted on Stanford Redivis.
@@ -240,6 +243,7 @@ LLM-based agents and systems for clinical reasoning, therapeutic decision-making
 - BiomedCLIP: Zhang et al. (2024). Large-Scale Domain-Specific Pretraining for Biomedical Vision-Language Processing. [arXiv:2303.00915](https://arxiv.org/abs/2303.00915)
 - BiomedGPT: Zhang et al. (2024). A generalist vision-language foundation model for diverse biomedical tasks. [Nature Medicine](https://www.nature.com/articles/s41591-024-03185-2)
 - BiomedParse: Zhao et al. (2025). A foundation model for joint segmentation, detection and recognition of biomedical objects across nine modalities. [Nature Methods](https://www.nature.com/articles/s41592-024-02499-w)
+- EVLF-FM: Bai et al. (2026). A clinical multimodal vision language foundation model with fine-grain explainability. [Nature Medicine](https://www.nature.com/articles/s41591-026-04655-5)
 - LLaVA-Med: Li et al. (2023). LLaVA-Med: Training a Large Language-and-Vision Assistant for Biomedicine in One Day. [arXiv:2306.00890](https://arxiv.org/abs/2306.00890)
 - MedSAM: Ma et al. (2024). Segment Anything in Medical Images. [arXiv:2304.12306](https://arxiv.org/abs/2304.12306)
 
@@ -255,6 +259,7 @@ LLM-based agents and systems for clinical reasoning, therapeutic decision-making
 ### Protein & Structural Biology
 
 - LucaOne: He et al. (2025). Generalized biological foundation model with unified nucleic acid and protein language. [Nature Machine Intelligence](https://doi.org/10.1038/s42256-025-01044-4)
+- Pinal: Zhou et al. (2026). Programmable design of functional proteins from natural language. [Nature](https://www.nature.com/articles/s41586-026-11205-z)
 - Chai-1: Chai Discovery (2024). Chai-1: Decoding the molecular interactions of life. [bioRxiv](https://www.biorxiv.org/content/10.1101/2024.10.10.615955)
 
 ### Drug Discovery
@@ -273,6 +278,7 @@ LLM-based agents and systems for clinical reasoning, therapeutic decision-making
 - AMEGA-LLM: Fast et al. (2024). Autonomous Medical Evaluation for Guideline Adherence of Large Language Models. [npj Digital Medicine](https://www.nature.com/articles/s41746-024-01356-6)
 - BRIDGE: Wu et al. (2026). BRIDGE: Benchmarking Large Language Models for Understanding Real-world Clinical Practice Text. [arXiv:2504.19467](https://arxiv.org/abs/2504.19467)
 - HealthBench: Arora et al. (2025). HealthBench: Evaluating Large Language Models Towards Improved Human Health. [arXiv:2505.08775](https://arxiv.org/abs/2505.08775)
+- KlinikeBench: Fang et al. (2026). KlinikeBench: Evaluating Language Models Beyond Diagnostic Accuracy. [arXiv:2609.38480](https://arxiv.org/abs/2609.38480)
 - MedFailBench: Ozkan (2026). MedFailBench: A Clinician-Built Open-Source Benchmark for Medical AI Safety Boundary Inspection. [arXiv:2607.15166](https://arxiv.org/abs/2607.15166)
 - Med-HALT: Pal et al. (2024). Med-HALT: Medical Domain Hallucination Test for Large Language Models. [arXiv:2307.15389](https://arxiv.org/abs/2307.15389)
 - MHB: Lu et al. (2026). MHB: Medical Hallucination Benchmark for Large Language Models in Complex Clinical Tasks. [AAAI 2026](https://doi.org/10.1609/aaai.v40i45.41243)
