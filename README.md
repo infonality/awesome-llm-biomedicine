@@ -1,16 +1,8 @@
-# Awesome LLMs for Biomedicine [![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![License: CC0 1.0](https://img.shields.io/badge/License-CC0%201.0-lightgrey.svg)](LICENSE)
+# Awesome LLMs for Biomedicine [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
 [![Biomedical AI research banner](assets/banner.png)](https://github.com/infonality/awesome-llm-biomedicine#readme)
 
-Large language models, datasets, tools, benchmarks, and papers for biomedical and clinical applications.
-
-I maintain this list from more than 15 years of work in the field, including experience organizing the n2c2/i2b2 shared tasks.
-
-PRs welcome — [suggest a resource](https://github.com/infonality/awesome-llm-biomedicine/issues/new).
-
-> **Educational resource.** This list supports research and engineering discovery. It is not medical advice, a clinical guideline, or a substitute for safety, privacy, regulatory, or licensing review.
-
----
+Applications of large language models and related foundation models in biomedical research and clinical practice.
 
 ## Contents
 
@@ -47,14 +39,11 @@ The list is curated, not ranked. Parameter counts, dataset sizes, availability, 
 
 Language models trained or adapted for biomedical literature, clinical notes, medical dialogue, and clinical reasoning.
 
-- [BioBERT](https://github.com/dmis-lab/biobert) - A 110M-parameter BERT model pretrained on PubMed abstracts and PMC full-text articles.
-- [BioGPT](https://github.com/microsoft/BioGPT) - A 1.5B-parameter generative model pretrained on PubMed literature for biomedical text generation and mining.
 - [BioMedLM (PubMedGPT)](https://huggingface.co/stanford-crfm/BioMedLM) - 2.7B params. Stanford CRFM; domain-specific model trained from scratch.
 - [BioMistral](https://huggingface.co/BioMistral/BioMistral-7B) - A 7B-parameter Mistral model adapted to biomedical text from PubMed Central.
 - [ClinicalBERT](https://huggingface.co/emilyalsentzer/Bio_ClinicalBERT) - A 110M-parameter BERT model adapted to clinical notes from MIMIC-III discharge summaries.
 - [ClinicalLongformer](https://huggingface.co/yikuan8/Clinical-Longformer) - A long-context clinical language model with a 4K-token context window for full-note processing.
 - [GatorTron](https://arxiv.org/abs/2203.03560) - Clinical language models from UF Health, trained on up to 90B tokens of clinical and biomedical text, with 3.9B and 8.9B parameter variants.
-- [HuatuoGPT](https://github.com/FreedomIntelligence/HuatuoGPT) - Chinese medical language models fine-tuned on physician dialogues, available in 7B, 13B, and 33B variants.
 - [HuatuoGPT-II](https://github.com/FreedomIntelligence/HuatuoGPT-II) - 7B/13B/34B params. One-stage medical adaptation for Chinese medical dialogue.
 - [Med-PaLM 2](https://arxiv.org/abs/2305.09617) - Google's medical language model; it is not open-weight and was evaluated on USMLE-style tasks.
 - [MedGemma](https://github.com/google-health/medgemma) - Collection of Gemma 3 variants for medical text and image comprehension: MedGemma 1.5 4B multimodal, plus MedGemma 1 4B multimodal and 27B text-only and multimodal models.
@@ -72,13 +61,10 @@ Language models trained or adapted for biomedical literature, clinical notes, me
 Multimodal models for biomedical imaging, radiology, pathology, and medical visual question answering.
 
 - [BiomedCLIP](https://huggingface.co/microsoft/BiomedCLIP-PubMedBERT_256-vit_base_patch16_224) - Biomedical vision-language foundation model pretrained on PMC-15M image-text pairs.
-- [BiomedGPT](https://github.com/taokz/BiomedGPT) - Generalist vision-language foundation model for diverse biomedical tasks. Nature Medicine 2024.
 - [BiomedParse](https://github.com/microsoft/BiomedParse) - Biomedical foundation model for joint segmentation, detection, and recognition across nine imaging modalities.
 - [CLEAR](https://www.nature.com/articles/s41551-026-01741-4) - Auditable radiology foundation model that grounds chest-X-ray representations in clinical concepts; Nature Biomedical Engineering 2026.
 - [HuatuoGPT-Vision](https://github.com/FreedomIntelligence/HuatuoGPT-Vision) - Medical multimodal LLM that injects visual knowledge at scale; 7B/34B models.
-- [LLaVA-Med](https://github.com/microsoft/LLaVA-Med) - Biomedical vision-language assistant trained on PMC-15M with curriculum learning for medical VQA.
 - [MedGemma 1.5](https://research.google/blog/next-generation-medical-image-interpretation-with-medgemma-15-and-medical-speech-to-text-with-medasr) - 4B multimodal model with expanded support for CT/MRI volumes, whole-slide histopathology, anatomical localization, longitudinal chest X-rays, and medical documents.
-- [MedSAM](https://github.com/bowang-lab/MedSAM) - Segment-anything model for universal medical image segmentation, trained on 1.5M image-mask pairs across 10 modalities.
 - [MedSigLIP](https://developers.google.com/health-ai-developer-foundations/medsiglip) - Medical image-text encoder built on SigLIP for biomedical image classification and retrieval; Health AI Developer Foundations terms apply.
 
 ## Genomics LLMs
@@ -91,11 +77,9 @@ Foundation models for single-cell RNA sequencing, DNA sequences, and genomics.
 - [DNABERT-2](https://github.com/MAGICS-LAB/DNABERT_2) - 117M params. DNA sequences. Improved genome-understanding model.
 - [Evo 2](https://github.com/arcinstitute/evo2) - 1B–40B params. DNA sequences. Long-context language model for genome modeling and design at single-nucleotide resolution up to 1M base pairs.
 - [Geneformer](https://huggingface.co/ctheodoris/Geneformer) - 95M params. scRNA-seq. Foundation model pretrained on 30M cells for network-biology tasks.
-- [HyenaDNA](https://github.com/HazyResearch/hyena-dna) - 1K–1M context. DNA sequences. Ultra-long-context genomic model.
 - [Nucleotide Transformer](https://huggingface.co/InstaDeepAI/nucleotide-transformer-2.5b-multi-species) - 500M–2.5B params. DNA sequences. Multi-species DNA foundation model.
 - [scGPT](https://github.com/bowang-lab/scGPT) - ~50M params. scRNA-seq. Single-cell foundation model for cell-type annotation and perturbation prediction.
 - [scFoundation](https://github.com/biomap-research/scFoundation) - scRNA-seq. Large-scale foundation model on single-cell transcriptomics with open code and checkpoints.
-- [scBERT](https://github.com/TencentAILabHealthcare/scBERT) - Single-cell type annotation using BERT-style pretraining.
 - [UmiFormer](https://arxiv.org/abs/2305.02110) - Transformer for single-cell RNA-seq cell-type annotation.
 
 ## Drug Discovery & Molecular LLMs
@@ -104,7 +88,6 @@ Models for molecular property prediction, biomolecular interactions, drug–drug
 
 - [Boltz-2](https://github.com/jwohlwend/boltz) - Biomolecular foundation model that jointly predicts complex structures and binding affinities; MIT-licensed code and weights.
 - [ChemBERTa](https://huggingface.co/seyonec/ChemBERTa-zinc-base-v1) - SMILES molecules. RoBERTa for molecular property prediction.
-- [Chemformer](https://github.com/MolecularAI/Chemformer) - SMILES to reactions. Transformer for retrosynthesis.
 - [MolT5](https://github.com/blender-nlp/MolT5) - Molecule to text. T5 model for molecule captioning and generation.
 - [MolReGPT](https://arxiv.org/abs/2310.17341) - LLM-based molecular generation through prompt engineering with SMILES.
 - [MAMMAL](https://github.com/BiomedSciAI/biomed-multi-alignment) - 458M biomedical foundation model trained on more than 2 billion biological samples across proteins, small molecules, and single-cell gene expression data.
@@ -115,7 +98,6 @@ Models for molecular property prediction, biomolecular interactions, drug–drug
 
 Protein sequence, structure, and design models. This section includes important foundation models that are not strictly language models.
 
-- [ESM-2](https://github.com/facebookresearch/esm) - 650M–15B params. Protein sequences. Meta's protein language model family.
 - [ESM3](https://www.evolutionaryscale.ai/blog/esm3-release) - Protein language model from EvolutionaryScale for generative protein design.
 - [LucaOne](https://github.com/LucaOne/LucaOne) - Unified nucleic-acid and protein foundation model with code and checkpoints for sequence embeddings, classification, regression, and residue-level tasks.
 - [ProGen2](https://github.com/salesforce/progen/tree/main/progen2) - 151M–6.4B params. Protein sequences. Generative protein-design models.
@@ -207,7 +189,7 @@ LLM-based agents and systems for clinical reasoning, therapeutic decision-making
 - [BioMCP](https://github.com/genomoncology/biomcp) - Biomedical MCP server and CLI for evidence-oriented search across literature, clinical trials, genomic variants, and other trusted sources.
 - [cTAKES](https://ctakes.apache.org/) - Clinical NLP. Clinical Text Analysis Knowledge Extraction System.
 - [MedSpaCy](https://github.com/medspacy/medspacy) - Clinical NLP pipeline with section detection and rule-based processing.
-- [MedCAT](https://github.com/CogStack/MedCAT) - Clinical NLP pipeline for medical concept annotation and linking to SNOMED CT and UMLS.
+- [MedCAT](https://github.com/CogStack/cogstack-nlp/tree/main/medcat) - Clinical NLP pipeline for medical concept annotation and linking to SNOMED CT and UMLS.
 - [scispaCy](https://github.com/allenai/scispacy) - Biomedical NLP pipeline with models for NER and entity linking.
 
 ## Key Papers
@@ -332,4 +314,12 @@ Some terms that appear throughout the list.
 
 ## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for the contribution guide. Suggest additions through [issues](https://github.com/infonality/awesome-llm-biomedicine/issues) or submit a pull request.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the contribution guide. [Suggest a resource](https://github.com/infonality/awesome-llm-biomedicine/issues/new) or submit a pull request.
+
+## Footnotes
+
+I maintain this list from more than 15 years of work in the field, including experience organizing the n2c2/i2b2 shared tasks.
+
+> **Educational resource.** This list supports research and engineering discovery. It is not medical advice, a clinical guideline, or a substitute for safety, privacy, regulatory, or licensing review.
+
+[Historical references](HISTORICAL.md) lists earlier research implementations for reproducibility and context.
